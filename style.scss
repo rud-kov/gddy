@@ -280,7 +280,6 @@ body {
   border: none;
   background-color: #111;
   color: #FFF;
-  display: inline-block;
   border-radius: 6px;
   position: relative;
   transition: all 0.5s;
@@ -289,22 +288,25 @@ body {
 
 .offer__button__text {
   white-space: nowrap;
-  margin: 0 auto;
+  position: relative;
 }
 
 .offer__button__text::after {
   content: url("./arrow__right.svg");
   position: absolute;
   opacity: 0;
-  right: -2px;
-  top: 10px;
+  top: 0;
+  right: -40px;
   transition: 0.5s;
 }
 
 .hero__offer__button:hover {
   .offer__button__text {
-    position: relative;
     left: -10px;
+  }
+  .offer__button__text::after {
+    opacity: 1;
+    right: -30px;
   }
 }
 
