@@ -234,7 +234,7 @@ body {
 .hero__offer--left {
   background-image: url("./row-mrq-hp-landscape (2).jpg");
   display: flex;
-  padding: 2.5dvw;
+  padding: 2dvw;
   background-size: cover;
   background-clip: border-box;
   background-repeat: no-repeat;
@@ -251,21 +251,25 @@ body {
 
 .hero__content--left {
   max-width: 350px;
-  gap: 25px;
   margin-bottom: 3rem;
 }
 
-.hero__left__category {
+.hero__content--left > *,
+.hero__content--right > * {
+  margin: 16px 0;
+}
+
+.hero__category {
   color: #111;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
-.hero__left__headline {
+.hero__headline--left {
   font-size: 3rem;
 }
 
-.hero__left__description {
+.hero__description {
   font-size: 1.2rem;
 }
 
@@ -289,7 +293,7 @@ body {
   content: url("./arrow__right.svg");
   position: absolute;
   opacity: 0;
-  top: 0;
+  top: -2px;
   right: -40px;
   transition: 0.5s;
 }
@@ -302,8 +306,8 @@ body {
   right: -30px;
 }
 
-.hero__left__disclaimer {
-  padding-top: 16px;
+.hero__disclaimer {
+  font-size: 0.9rem;
 }
 
 .hero__offer--right {
@@ -315,6 +319,49 @@ body {
   flex: 2;
 }
 
+.hero__headline--right {
+  font-size: 2rem;
+}
+
 .hero__content--right {
   text-align: center;
+}
+
+/* HERO SERVICES ************/
+.hero__services__grid {
+  display: grid;
+  grid-auto-flow: column dense;
+  grid-template-columns: repeat(auto-fit, minmax(calc(20% - 0.1875rem)), 1fr);
+  grid-template-rows: repeat(2, minmax(3rem, 1fr));
+  border-top: 0.5px solid #767676;
+}
+
+.hero__service {
+  border-left: 0.5px solid #767676;
+  border-right: 0.5px solid #767676;
+  border-bottom: 0.5px solid #767676;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.hero__service:hover {
+  background-color: #111;
+  color: #FFF;
+  transition: all 800ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero__service--almostlast {
+  align-items: flex-end;
+  border-bottom: unset;
+}
+
+.hero__service--almostlast:hover .hero__service--last {
+  background-color: #111;
+  color: #FFF;
+}
+
+.hero__service--last {
+  align-items: flex-start;
 }/*# sourceMappingURL=style.css.map */
