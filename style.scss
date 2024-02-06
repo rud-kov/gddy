@@ -164,6 +164,14 @@ body {
   flex: 2;
 }
 
+.hero__searchbar input:focus {
+  border: 2px solid blue; 
+
+  .hero__input__button {
+    border: 2px solid blue;
+  }
+}
+
 .hero__inner {
   flex: 2;
 }
@@ -303,7 +311,8 @@ body {
 }
 
 .offer__button__text::after {
-  content: "&rarr";
+  content: "\2192";
+  font-size: 1.2rem;
   position: absolute;
   opacity: 0;
   top: 0;
@@ -396,7 +405,7 @@ body {
 }
 
 .service__content--warrow::after {
-  content: "&#8594";
+  content: url("/arrow__right.svg");
   position: absolute;
   top: 0;
   right: -25px;
