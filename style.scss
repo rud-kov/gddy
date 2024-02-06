@@ -303,12 +303,15 @@ body {
 }
 
 .offer__button__text::after {
-  content: url("./arrow__right.svg");
+  content: "&rarr";
   position: absolute;
   opacity: 0;
-  top: -2px;
+  top: 0;
   right: -40px;
+  height: 100%;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
 }
 
 .hero__offer__button:hover {
@@ -364,6 +367,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
+  transition: all 500ms;
 }
 
 .hero__service--almostlast {
@@ -392,7 +396,7 @@ body {
 }
 
 .service__content--warrow::after {
-  content: url("/arrow__right.svg");
+  content: "&#8594";
   position: absolute;
   top: 0;
   right: -25px;
@@ -400,6 +404,7 @@ body {
   opacity: 0;
   display: flex;
   align-items: center;
+  transition: all 500ms;
 }
 
 .service__headline,
@@ -417,7 +422,6 @@ body {
 .hero__service:hover {
   background-color: #111;
   color: #FFF;
-  transition: all 800ms cubic-bezier(0.16,1,0.3,1);
   border-left: 0.5px solid #111;
   border-right: 0.5px solid #111;
   border-bottom: 0.5px solid;
@@ -425,7 +429,6 @@ body {
   .service__content::after {
     opacity: 1;
     right: -35px;
-    transition: 0.5s;
   }
 
   .service__content--warrow {
