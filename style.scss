@@ -375,6 +375,10 @@ body {
 
 .hero__service--last {
   align-items: flex-start;
+  grid-row: span 2;
+  place-self: stretch;
+  display: flex;
+  align-items: center;
 }
 
 
