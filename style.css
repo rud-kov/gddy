@@ -162,13 +162,6 @@ body {
   flex: 2;
 }
 
-.hero__searchbar input:focus {
-  border: 2px solid blue;
-}
-.hero__searchbar input:focus .hero__input__button {
-  border: 2px solid blue;
-}
-
 .hero__inner {
   flex: 2;
 }
