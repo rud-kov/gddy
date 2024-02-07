@@ -29,6 +29,7 @@ a:hover {
 
 body {
   font-family: "Helvetica";
+  overflow-x: hidden;
 }
 
 /* HEADER */
@@ -448,6 +449,70 @@ body {
 }
 
 
+/* REVIEWS PART */
+
+.reviews__wrapper {
+  padding: 5dvh 3rem;
+  overflow-x: scroll;
+}
+
+.reviews__inner__wrapper {
+  overflow-x: scroll;
+}
+
+.reviews__mainhl {
+  font-size: 2.5rem;
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.reviews__box__wrapper {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  gap: 20px;
+}
 
 
+.reviews__box {
+  background-color: whitesmoke;
+  display: flex;
+  align-items: stretch;
+  border-radius: 8px;
+  min-width: 450px;
+  min-height: 500px;
+}
 
+.reviews__content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review__citation {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.review__stars {
+  padding: 20px 0 0;
+  display: block;
+}
+
+.review__star {
+  width: 15px;
+  height: 15px;
+}
+
+.review__text {
+  padding: 35px 0 0;
+  line-height: 1.4;
+  font-size: 1.1rem;
+}
+
+
+.review__author {
+  font-size: 0.8rem;
+}
