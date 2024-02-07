@@ -122,6 +122,7 @@ body {
 .header__link--shopcart {
   display: flex;
   align-items: center;
+  padding: 8px 0 8px 12px;
 }
 
 .header__shopcart {
@@ -162,6 +163,11 @@ body {
   flex: 2;
 }
 
+.hero__searchbar--focused {
+  box-sizing: border-box;
+  outline: 2px solid skyblue;
+}
+
 .hero__inner {
   flex: 2;
 }
@@ -181,7 +187,6 @@ body {
   border-left: 1px solid #767676;
   border-top: 1px solid #767676;
   border-bottom: 1px solid #767676;
-  border-right: unset;
   background-color: whitesmoke;
   font-size: 20px;
   padding: 0 16px;
@@ -423,5 +428,6 @@ body {
   right: -35px;
 }
 .hero__service:hover .service__content--warrow {
-  right: 15px;
+  position: relative;
+  right: 25px;
 }/*# sourceMappingURL=style.css.map */
