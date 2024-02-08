@@ -526,7 +526,11 @@ body {
 }
 
 .review__control__button:hover {
+  background-color: #000;
   cursor: pointer;
+}
+.review__control__button:hover .control__arrow {
+  fill: #FFF;
 }
 
 .review__control__button--right {
