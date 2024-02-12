@@ -22,7 +22,7 @@
                     <nav>
                         <ul class="header__left__ul">
                             <li>
-                                <a class="header__logo__link">
+                                <a class="header__logo__link header__link--hovered">
                                     <figure>
                                         <svg class="header__logo" xmlns="http://www.w3.org/2000/svg" class="logo-mark" viewBox="0 0 166 32">
                                             <path class="mobile desktop" d="M30.824 1.453c-3.713-2.316-8.603-1.77-12.963.972-4.347-2.74-9.239-3.288-12.948-.972C-.955 5.12-1.667 14.564 3.32 22.546c3.677 5.887 9.428 9.335 14.548 9.271 5.119.064 10.87-3.384 14.547-9.27C37.4 14.563 36.692 5.12 30.824 1.452zM6.02 20.863a19.112 19.112 0 01-2.303-5.273 15.067 15.067 0 01-.5-4.97C3.44 7.673 4.64 5.375 6.598 4.15c1.957-1.224 4.544-1.295 7.299-.203.419.169.829.358 1.228.568a22.496 22.496 0 00-3.956 4.754C8.14 14.116 7.215 19.511 8.272 23.81a19.723 19.723 0 01-2.253-2.947zm26.003-5.273a19.158 19.158 0 01-2.302 5.272 19.733 19.733 0 01-2.254 2.954c.946-3.855.303-8.576-2.014-13.005a.583.583 0 00-.837-.228l-7.225 4.515a.59.59 0 00-.188.813l1.06 1.695a.59.59 0 00.814.188l4.683-2.925c.151.454.303.901.416 1.363.442 1.617.611 3.297.5 4.97-.223 2.95-1.424 5.247-3.38 6.471a6.607 6.607 0 01-3.35.97h-.15a6.599 6.599 0 01-3.35-.97c-1.958-1.224-3.159-3.521-3.381-6.472-.11-1.672.058-3.352.5-4.969a19.671 19.671 0 016.03-9.65 15.108 15.108 0 014.241-2.629c2.748-1.092 5.34-1.02 7.298.203 1.958 1.224 3.157 3.522 3.38 6.47a15.105 15.105 0 01-.49 4.964z"/>
@@ -34,13 +34,13 @@
                                     <figcaption class="header__logo__caption">United Kingdom</figcaption>
                                 </a>
                             </li>
-                            <li><a class="header__link">Domains</a></li>
-                            <li><a class="header__link">Websites and Hosting</a></li>
+                            <li><a class="header__link header__link--hovered">Domains</a></li>
+                            <li><a class="header__link header__link--hovered">Websites and Hosting</a></li>
                             <li class="header__link--divider"></li>
-                            <li><a class="header__link">Email</a></li>
-                            <li><a class="header__link">Marketing</a></li>
+                            <li><a class="header__link header__link--hovered">Email</a></li>
+                            <li><a class="header__link header__link--hovered">Marketing</a></li>
                             <li class="header__link--divider"></li>
-                            <li><a class="header__link">Pricing</a></li>
+                            <li><a class="header__link header__link--hovered">Pricing</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -49,10 +49,33 @@
                     <nav>
                         <ul class="header__right__ul">
 
-                            <li><a class="header__link header__link--right"><p>Contact Us</p></a></li>
-                            <li><a class="header__link header__link--right">Help</a></li>
-                            <li><a class="header__link header__link--right header__link--arrow"><p>Sign In</p><img class="link__arrow" src="./arrow__down.svg"></a></li>
-                            <li><a class="header__link header__link--right header__link--shopcart"><svg class="header__shopcart" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9.5 19.75a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm8 0a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm3.108-12.188A.749.749 0 0020 7.25H7.54l-.829-2.487A.75.75 0 006 4.25H3a.75.75 0 000 1.5h2.46l.823 2.47.01.034 1.996 5.983A.751.751 0 009 14.75h9a.751.751 0 00.712-.513l2-6a.752.752 0 00-.104-.675zM17.46 13.25H9.541l-1.5-4.5h10.918z'/></svg></a></li>
+                            <li><a class="header__link header__link--hovered header__link--right">Contact Us</a></li>
+                            <li><a class="header__link header__link--hovered header__link--right">Help</a></li>
+                            <li class="arrow__li"><a class="header__link header__link--hovered header__link--right header__link--arrow"><p>Sign In</p><svg xmlns='http://www.w3.org/2000/svg' class="link__arrow" viewBox='0 0 24 24'><path fill="#FFF" d='M18.53 8.47c-.139-.14-.333-.22-.53-.22s-.391.08-.53.22L12 13.94 6.53 8.47a.75.75 0 00-1.06 1.06l6 6c.139.14.333.22.53.22s.391-.08.53-.22l6-6a.753.753 0 00.22-.53.757.757 0 00-.22-.53z'/></svg></a>
+                                <div class="header__link__arrowmenu header__link__arrowmenu--hidden">
+                                    <div class="arrowmenu__content">
+                                        <div class="arrowmenu__chapter">
+                                            <p>Registered Users</p>
+                                            <p>Have an account? Sign in Now</p>
+                                            <a class="arrowmenu__link"><p>Sign In</p></a>
+                                        </div>
+                                        <hr>
+                                        <div class="arrowmenu__chapter">
+                                            <p>New Customer</p>
+                                            <p>New to GoDaddy? Create an account to get started today.</p>
+                                            <a class="arrowmenu__link"><p>Create an Account</p></a>
+                                        </div>
+                                        <hr>
+                                        <div class="arrowmenu__chapter">
+                                            <p id="inbox__links">Inbox Links</p>
+                                            <a class="arrowmenu__link"><p>Sign in to Office 365 Email</p></a>
+                                            <a class="arrowmenu__link"><p>Sign in to GoDaddy Webmail</p></a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class="header__link header__link--hovered header__link--right header__link--shopcart"><svg class="header__shopcart" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9.5 19.75a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm8 0a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm3.108-12.188A.749.749 0 0020 7.25H7.54l-.829-2.487A.75.75 0 006 4.25H3a.75.75 0 000 1.5h2.46l.823 2.47.01.034 1.996 5.983A.751.751 0 009 14.75h9a.751.751 0 00.712-.513l2-6a.752.752 0 00-.104-.675zM17.46 13.25H9.541l-1.5-4.5h10.918z'/></svg></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -203,7 +226,7 @@
 
     </main>
 
-    <aside class="reviews__wrapper">
+    <aside class="reviews__wrapper reviews__wrapper__opacityoff">
         <div>
             <h2 class="reviews__mainhl">Trusted by 20+ million<br>customers around the world.</h2>
         </div>
@@ -387,21 +410,20 @@
                 <div class="reviews__box">
                     <div class="reviews__content">
                         <div>
-                            <p class="review__citation">Go Daddy is worth moving to</p>
+                            <p class="review__citation">Easy to have a domain and create a…</p>
                             <div class="review__stars">
-                                <img class="review__star" src="/reviewstar.svg">
                                 <img class="review__star" src="/reviewstar.svg">
                                 <img class="review__star" src="/reviewstar.svg">
                                 <img class="review__star" src="/reviewstar.svg">
                                 <img class="review__star" src="/reviewstar.svg">
                             </div>
                             <div>
-                                <p class="review__text">In the beginning of my search for a good reliant website hosting company Go Daddy has been incredible. ********** 10 stars for the professionalism and reasonable costs. The techs have been amazing with customer service assistance.</p>
+                                <p class="review__text">Easy to have a domain and create a website. Customer Service is always willing to assist 24/7.</p>
                             </div>
                         </div>
 
                         <div>
-                            <p class="review__author">Cynthia Portaro</p>
+                            <p class="review__author">Mark M</p>
                         </div>
                     </div>
                 </div>
@@ -430,15 +452,142 @@
                 
             </div>
         </div>
-        <div class="reviews__controller__wrapper">
+
+        <div class="reviews__bottom">
             <div>
-                <button class="review__control__button review__control__button--left"><svg xmlns='http://www.w3.org/2000/svg' class="control__arrow" viewBox='0 0 24 24'><path d='M10.06 12l5.47-5.47a.75.75 0 00-1.06-1.06l-6 6c-.14.139-.22.333-.22.53s.08.391.22.53l6 6c.139.14.333.221.53.222.198 0 .393-.08.532-.22s.22-.334.22-.531a.756.756 0 00-.222-.531z'/></svg></button>
+                <div>
+                    <img class="trustpilot__img" src="/trustpilot-logo-svg.webp">
+                </div>
+                <div>
+                    <img class="review__star review__star--general" src="/reviewstar.svg">
+                    <img class="review__star review__star--general" src="/reviewstar.svg">
+                    <img class="review__star review__star--general" src="/reviewstar.svg">
+                    <img class="review__star review__star--general" src="/reviewstar.svg">
+                    <svg class="review__star review__star--general" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 18 18" fill="none"><path d="M18.0002 0H9.00537V18.0001H18.0002V0Z" fill="#DCDCE6"></path><path d="M9.00524 0H0V18.0001H9.00524V0Z" fill="#00B67B"></path><path d="M9.00575 12.1358L11.7397 11.4366L12.8771 14.9636L9.00575 12.1358ZM15.2666 7.57576H10.4771L9.00575 3.03662L7.56575 7.56533H2.70312L6.60575 10.3723L5.12401 14.8697L9.01619 12.0627L11.4162 10.3306L15.298 7.56533L15.2666 7.57576Z" fill="#fff"></path></svg>
+                </div>
+                <div class="reviews__bottom__subline">
+                    <p>4.7 out of 5 stars based on <b>90,010 reviews</b></p><span>|</span><p>Showing our 4 and 5 stars reviews.</p>
+                </div>
             </div>
-            <div>
-                <button class="review__control__button review__control__button--right"><svg xmlns='http://www.w3.org/2000/svg' class="control__arrow" viewBox='0 0 24 24'><path d='M10.06 12l5.47-5.47a.75.75 0 00-1.06-1.06l-6 6c-.14.139-.22.333-.22.53s.08.391.22.53l6 6c.139.14.333.221.53.222.198 0 .393-.08.532-.22s.22-.334.22-.531a.756.756 0 00-.222-.531z'/></svg></button>
+
+
+            <div class="reviews__controller__wrapper">
+                <div>
+                    <button class="review__control__button review__control__button--left"><svg xmlns='http://www.w3.org/2000/svg' class="control__arrow" viewBox='0 0 24 24'><path d='M10.06 12l5.47-5.47a.75.75 0 00-1.06-1.06l-6 6c-.14.139-.22.333-.22.53s.08.391.22.53l6 6c.139.14.333.221.53.222.198 0 .393-.08.532-.22s.22-.334.22-.531a.756.756 0 00-.222-.531z'/></svg></button>
+                </div>
+                <div>
+                    <button class="review__control__button review__control__button--right"><svg xmlns='http://www.w3.org/2000/svg' class="control__arrow" viewBox='0 0 24 24'><path d='M10.06 12l5.47-5.47a.75.75 0 00-1.06-1.06l-6 6c-.14.139-.22.333-.22.53s.08.391.22.53l6 6c.139.14.333.221.53.222.198 0 .393-.08.532-.22s.22-.334.22-.531a.756.756 0 00-.222-.531z'/></svg></button>
+                </div>
             </div>
         </div>
     </aside>
+
+    <section class="rtb">
+        <div class="rtb__wrapper">
+
+            <div class="rtb__block">
+                <div class="rtb__image__container">
+                    <img class="rtb__image" src="/Img-feat-OYBO-UK-XL.jpg">
+                </div>
+                <div class="rtb__text__container">
+                    <div class="rtb__text__content">
+                        <p class="rtb__preheader">Domain + Professional Email</p>
+                        <h3 class="rtb__headline">Build your brand online.</h3>
+                        <p class="rtb__bodytext">Get a memorable online address — .com or .co.uk, it’s your choice — and back it up with a matching email address your customers can trust. Get both, plus expert 24x7 support, with this bundle for just €2.01/mo.</p>
+
+                        <a class="rtb__button">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="rtb__block">
+                
+                <div class="rtb__text__container">
+                    <div class="rtb__text__content">
+                        <p class="rtb__preheader">Professional Email</p>
+                        <h3 class="rtb__headline">Build on your success.</h3>
+                        <p class="rtb__bodytext">Everyone has email, but that doesn’t mean all email is the same. Customers are nine times more likely to choose a business with a professional address like you@NeueBloom.com.</p>
+
+                        <a class="rtb__button">See Email Plans</a>
+                    </div>
+                </div>
+                <div class="rtb__image__container">
+                    <img class="rtb__image" src="/you.jpg">
+                </div>
+            </div>
+            <div class="rtb__block">
+                <div class="rtb__image__container">
+                    <img class="rtb__image" src="/feat-hosting.jpg">
+                </div>
+                <div class="rtb__text__container">
+                    <div class="rtb__text__content">
+                        <p class="rtb__preheader">Hosting</p>
+                        <h3 class="rtb__headline">Fast, secure and always online.</h3>
+                        <p class="rtb__bodytext">Already have a website? Give it the home it deserves. With free SSL, industry-leading load times, guaranteed 99.9% uptime and expert, 24/7 support, your site couldn't ask for more.</p>
+
+                        <a class="rtb__button">See Web Hosting Plans</a>
+                    </div>
+                </div>
+            </div>
+            <div class="rtb__block">
+                
+                <div class="rtb__text__container">
+                    <div class="rtb__text__content">
+                        <p class="rtb__preheader">Online Store</p>
+                        <h3 class="rtb__headline">Sell your products to anyone, anywhere.</h3>
+                        <p class="rtb__bodytext">Whether you sell home décor or hip hop beats, our Online Store is built to work for you. Easily create a store that fits your brand, get found with integrated marketing tools and do it all from your smartphone.</p>
+                        <div class="rtb__special__buttons">
+                            <a class="rtb__button">Start for Free</a>
+                            <p>Learn More</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="rtb__image__container">
+                    <img class="rtb__image" src="/ecom.jpg">
+                </div>
+            </div>
+
+            <div class="rtb__block">
+                <div class="rtb__image__container">
+                    <img class="rtb__image" src="/ftr-FOSMO-67867-WM-HP.jpg">
+                </div>
+                <div class="rtb__text__container">
+                    <div class="rtb__text__content">
+                        <p class="rtb__preheader">Websites + Marketing</p>
+                        <h3 class="rtb__headline">Get more than just a website.</h3>
+                        <p class="rtb__bodytext"><span>Easily create a modern, professional website</span> — no technical skills required — thanks to 100s of industry-specific templates.</p>
+                        <p class="rtb__bodytext"><span>Take the guesswork out of building your business</span> with GoDaddy InSight, A.I.-powered advice that’s tailored to your business.</p>
+                        <p class="rtb__bodytext"><span>Get found on the sites your customers visit most</span> with built-in tools for SEO, social media and email marketing.</p>
+                        <p class="rtb__bodytext"><span>Add an online store to sell physical and digital products,</span> track your inventory and even let customers book appointments online.</p>
+
+                        <a class="rtb__button">Start for Free</a>
+                        <p class="rtb__disclaimer">No charge, no obligation, nothing to cancel.**</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="domain">
+
+        <div class="domain__content">
+            <h3>It all Starts with a domain.</h3>
+
+            <p>Make your idea real. Claim your space online with a domain.</p>
+
+            <div class="hero__searchbar hero__searchbar--secondary">
+                <input class="hero__input hero__input--secondary" type="text" required minlength="1" placeholder="Find your perfect domain">
+                <a class="hero__input__button hero__input__button--secondary"><p>Search Domains</p></a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
         
 </body>
 

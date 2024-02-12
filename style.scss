@@ -29,7 +29,7 @@ a:hover {
 
 body {
   font-family: "Helvetica";
-  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 /* HEADER */
@@ -135,15 +135,91 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
 }
+
+.arrow__li {
+  position: relative;
+}
+
+
+.header__link__arrowmenu {
+  position: absolute;
+  width: 354px;
+  margin: 0 auto;
+  right: 0;
+  top: 50px;
+  background-color: #FFF;
+  z-index: 5;
+  box-shadow: 0px 1px 8px rgba(118,118,118,0.3);
+  border-radius:4px;
+}
+
+.header__link__arrowmenu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 12px solid #FFF;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+}
+
+.arrowmenu__content {
+  padding: 8px 16px;
+}
+
+.arrowmenu__content > hr {
+  border-top: 1px solid #d6d6d6;
+}
+
+.arrowmenu__chapter p {
+  margin: 16px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.arrowmenu__link {
+  white-space: nowrap;
+}
+
+.arrowmenu__link p {
+  text-decoration: underline;
+  color: #09757A;
+}
+
+#inbox__links {
+  font-size: 0.8;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 
 .link__arrow {
   height: 20px;
 }
 
-.header__link:hover {
+.header__link--hovered:hover {
   background-color: #5E5E5E;
   border-radius: 8px;
+}
+
+.header__link__arrowmenu--hidden {
+  display: none;
+}
+
+.header__link--arrow--opened {
+  background-color: #FFF;
+  border-radius: 8px;
+  color: #000;
+
+  .link__arrow path {
+    fill: #000;
+  }
 }
 
 .header__link--shopcart:hover {
@@ -453,7 +529,17 @@ body {
 
 .reviews__wrapper {
   padding: 5dvh 3rem;
-  overflow-x: scroll;
+}
+
+.reviews__wrapper__opacityoff {
+  opacity: 0;
+}
+
+
+.reviews__wrapper__opacityon {
+  opacity: 1;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 0.5s ease-out;
 }
 
 .reviews__mainhl {
@@ -504,6 +590,7 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 0.8rem;
+  white-space: nowrap;
 }
 
 .review__stars {
@@ -528,8 +615,37 @@ body {
   font-size: 0.8rem;
 }
 
+.reviews__bottom {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trustpilot__img {
+  height: 40px;
+}
+
+.review__star--general {
+  width: 30px;
+  height: 30px;
+}
+
+.reviews__bottom__subline {
+  padding: 20px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.reviews__bottom__subline > span {
+  color: #d4dbe0;
+  font-size: 1.375rem
+}
+
 .reviews__controller__wrapper {
-  padding-top: 40px;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -560,4 +676,105 @@ body {
 .control__arrow {
   width: 30px;
   height: 30px;
+}
+
+
+/* RTB BLOCK */
+
+.rtb {
+  padding: 60px 3rem;
+}
+
+.rtb__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.rtb__image__container {
+  display: flex;
+  flex: 1;
+}
+
+.rtb__image {
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+}
+
+.rtb__text__container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rtb__text__content {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  text-align: left;
+  padding: 4dvw;
+}
+
+
+.rtb__preheader {
+  font-size: 0.9rem;
+}
+
+.rtb__headline {
+  font-size: 2.2rem;
+}
+
+.rtb__bodytext {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.rtb__bodytext > span {
+  font-weight: bolder;
+}
+
+.rtb__button {
+  white-space: nowrap;
+  font-weight: bolder;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  padding: 1rem;
+  border: 2px solid #000;
+  color: #000;
+  text-align: center;
+  max-width: fit-content;
+}
+
+.rtb__button:hover {
+  transform: scale(1.05);
+  transform-origin: top;
+}
+
+.rtb__special__buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.rtb__disclaimer {
+  font-size: 0.8rem;
+}
+
+/*********** DOMAIN *********/
+
+.domain {
+  background-color: #D8EFEF;
+  text-align: center;
+}
+
+.domain__content {
+  margin: 0 auto;
+}
+
+.hero__input__button--secondary {
+  background: #000;
 }
