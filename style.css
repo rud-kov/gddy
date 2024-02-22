@@ -261,6 +261,7 @@ body {
   border-left: 1px solid #767676;
   border-top: 1px solid #767676;
   border-bottom: 1px solid #767676;
+  border-right: transparent;
   background-color: whitesmoke;
   font-size: 20px;
   padding: 0 16px;
@@ -274,7 +275,7 @@ body {
   border-top: 1px solid #767676;
   border-bottom: 1px solid #767676;
   border-right: 1px solid #767676;
-  border-left: unset;
+  border-left: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -746,6 +747,16 @@ body {
 
 .domain__content {
   margin: 0 auto;
+  padding: 60px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 40dvw;
+}
+
+.domain__h3 {
+  font-size: 2rem;
 }
 
 .hero__input__button--secondary {

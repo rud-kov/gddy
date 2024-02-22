@@ -15,7 +15,9 @@ arrowDownSwitch.addEventListener("click", rollArrowMenu)
 /// HERO INPUT
 
 const heroInput = document.querySelector(".hero__input");
+const heroInputSecondary = document.querySelector(".hero__input--secondary")
 const heroSearchBar = document.querySelector(".hero__searchbar")
+
 
 const focusBlue = () => {
     heroSearchBar.classList.add("hero__searchbar--focused")
@@ -24,6 +26,21 @@ const focusBlue = () => {
 const unFocusBlue = () => {
     heroSearchBar.classList.toggle("hero__searchbar--focused")
 }
+
+
+const secondaryFocusBlue = () => {
+    heroInputSecondary.classList.add("hero__searchbar--focused")
+}
+
+const secondaryunFocusBlue = () => {
+    heroInputSecondary.classList.toggle("hero__searchbar--focused")
+}
+
+
+
+heroInputSecondary.addEventListener("focus", secondaryFocusBlue)
+
+heroInputSecondary.addEventListener("blur", secondaryunFocusBlue)
 
 heroInput.addEventListener("focus", focusBlue);
 
