@@ -863,7 +863,7 @@ body {
 /******** FAQ ***********/////
 
 .faq {
-  margin: 200px 0;
+  margin: 200px 0 0 0;
 }
 
 .faq__wrapper {
@@ -879,17 +879,22 @@ body {
 .faq__questions {
   padding: 24px;
   margin: 16px auto;
-
 }
 
 .faq__mainhl {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   margin-bottom: 24px;
 }
 
 .faq__shl {
   font-size: 1.8rem;
   margin-bottom: 24px;
+}
+
+.faq__bodycopy {
+  margin: 10px 0;
+  line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 
@@ -922,10 +927,68 @@ body {
 
 .faq__details__li {
   list-style: disc;
-  margin-left: 20px;
+  margin: 10px 0px 0 20px;
+  font-size: 0.9rem;
 }
 
+.faq__details__li--number {
+  list-style: decimal
+}
 
 .faq__bodycopy {
   margin: 8px 0 0;
+}
+
+.faq__note {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 0.9rem;
+  margin: 100px 0;
+}
+
+.faq__support {
+  margin: 100px 0 0 0;
+  text-align: center;
+  background-color: whitesmoke;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.footer {
+  background-color: #000;
+}
+
+.footer__header {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  flex-direction: column;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.footer__header__text {
+  color: #FFF;
+}
+
+.footer__content__wrapper {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.footer__column {
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
