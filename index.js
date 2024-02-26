@@ -92,6 +92,14 @@ const controlButtonRight = document.querySelector(".review__control__button--rig
 });
 
 
+////  FAQ ARROWS... 
 
+const faqDetails = document.querySelectorAll(".faq__details");
+const faqArrows = document.querySelectorAll(".faq__summary__arrow");
 
+faqDetails.forEach((faqDetail, index) => {
+    faqDetail.addEventListener("click", (event) => {
+        faqArrows[index].classList.toggle("faq__summary__arrow--open");
+    });
+});
 
