@@ -237,18 +237,18 @@ body {
   padding: 0 3rem;
 }
 
+input[type="text"]:focus {
+  outline: none
+}
+
 .hero__searchbar {
   display: flex;
   flex: 2;
+  outline: 1px solid #767676;
 }
 
 .hero__searchbar--focused {
-  box-sizing: border-box;
-  //border-left: 2px solid skyblue;
-  //border-right: 2px solid skyblue;
-  //border-bottom: 2px solid skyblue;
-  //border-top: 2px solid skyblue;
-  outline: 2px solid skyblue;
+  outline: 3px solid blue;
 }
 
 .hero__inner {
@@ -267,23 +267,16 @@ body {
 .hero__input {
   flex: 2;
   height: 60px;
-  border-left: 1px solid #767676;
-  border-top: 1px solid #767676;
-  border-bottom: 1px solid #767676;
-  border-right: transparent;
+  border-width: 0px;
   background-color: whitesmoke;
   font-size: 20px;
   padding: 0 16px;
-  outline: none;
-} 
+}
 
 .hero__input__button {
   height: 60px;
   background-color: #00838C;
   color: #FFFF;
-  border-top: 1px solid #767676;
-  border-bottom: 1px solid #767676;
-  border-right: 1px solid #767676;
   border-left: none;
   display: flex;
   align-items: center;

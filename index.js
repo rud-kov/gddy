@@ -37,7 +37,6 @@ const secondaryunFocusBlue = () => {
 }
 
 
-
 heroInputSecondary.addEventListener("focus", secondaryFocusBlue)
 
 heroInputSecondary.addEventListener("blur", secondaryunFocusBlue)
