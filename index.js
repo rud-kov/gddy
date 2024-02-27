@@ -29,11 +29,11 @@ const unFocusBlue = () => {
 
 
 const secondaryFocusBlue = () => {
-    heroInputSecondary.classList.add("hero__searchbar--focused")
+    heroInputSecondary.classList.add("hero__input--secondary--focused")
 }
 
 const secondaryunFocusBlue = () => {
-    heroInputSecondary.classList.toggle("hero__searchbar--focused")
+    heroInputSecondary.classList.toggle("hero__input--secondary--focused")
 }
 
 

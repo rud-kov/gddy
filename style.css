@@ -232,10 +232,6 @@ body {
   padding: 0 3rem;
 }
 
-input[type=text]:focus {
-  outline: none;
-}
-
 .hero__searchbar {
   display: flex;
   flex: 2;
@@ -266,6 +262,10 @@ input[type=text]:focus {
   background-color: whitesmoke;
   font-size: 20px;
   padding: 0 16px;
+}
+
+input[type=text]:focus {
+  outline: none;
 }
 
 .hero__input__button {
@@ -758,6 +758,12 @@ input[type=text]:focus {
 
 .hero__searchbar--secondary {
   flex: 0;
+  outline: none;
+}
+
+.hero__input--secondary--focused {
+  outline: 2px solid blue !important;
+  outline-offset: -2px;
 }
 
 .domain__h3 {
@@ -818,6 +824,10 @@ input[type=text]:focus {
 .guide__searchbar__underlinks {
   display: flex;
   gap: 15px;
+}
+
+.hero__searchbar--third {
+  outline: 0.5px solid #767676;
 }
 
 .guide__searchbar__links {
