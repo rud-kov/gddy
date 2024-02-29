@@ -1008,10 +1008,16 @@ input[type="text"]:focus {
 .footer__bottombar {
   padding: 0 3rem;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.footer__bottombar__link--languague {
+  display: flex;
 }
 
 .footer__bottombar__left {
@@ -1025,11 +1031,106 @@ input[type="text"]:focus {
   display: flex;
   align-items: center;
   font-size: 0.9rem;
+  position: relative;
 }
 
-.arrow__up {
+.footer__bottombar__expandmenu {
+  position: absolute;
+  display: none;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  flex: 4;
+  background-color: whitesmoke;
+  transition: all 1s ease;
+  transform: scaleY(0);
+}
+
+.footer__bottombar__expandmenu--opened {
+  display: flex;
+  transform: scaleY(1);
+}
+
+
+.footer__bottombar__expandmenu--currency {
+  position: absolute;
+  bottom: 100%;
+  display: none;
+  width: 160px;
+  height: 400px;
+  background-color: whitesmoke;
+  overflow: scroll;
+}
+
+.bottombar__expandmenu__wrapper {
+  padding: 2.5rem;
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+}
+
+.bottombar__expandmenu__wrapper--currency {
+  width: 160px;
+  padding: 0;
+  text-align: left;
+}
+
+.footer__expandmenu__hl {
+  font-size: 1.6rem;
+}
+
+.footer__bottombar__languagues {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottombar__languague__column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bottombar__languague__column a {
+  font-size: 0.9rem;
+  font-weight: bolder;
+  color: #000;
+}
+
+.expandmenu__currency__button {
+  border: transparent;
+  text-align: left;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: whitesmoke;
+  font-size: 1rem; 
+}
+
+.expandmenu__currency__button--us {
+  border-bottom: 1px solid #767676;
+}
+
+.expandmenu__currency__button:hover {
+  background-color: #FFF;
+}
+
+.bottombar__languague__column a:hover {
+  cursor: pointer;
+  color: #1976d2;
+}
+
+.footer__bottombar__link:hover {
+  cursor: pointer;
+}
+
+.bottombar__arrow__up {
   width: 20px;
-  transform: rotate(180deg);
+  transition: 500ms;
+}
+
+.bottombar__arrow__up--rotate {
+  transform: rotate(-180deg);
 }
 
 .icon {

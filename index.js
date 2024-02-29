@@ -102,3 +102,46 @@ faqDetails.forEach((faqDetail, index) => {
     });
 });
 
+
+/******** FOOTER LINKS *****////
+
+
+const footerLanguague = document.querySelector(".footer__bottombar__link--languague");
+
+const footerCurrency = document.querySelector(".footer__bottombar__link--currency");
+
+const expandmenuLanguague = document.querySelector(".footer__bottombar__expandmenu");
+
+const expandmenuCurrency = document.querySelector(".footer__bottombar__expandmenu--currency");
+
+const bottombarArrow = document.querySelector(".bottombar__arrow__up--languague");
+
+const bottombarArrowCurrency = document.querySelector(".bottombar__arrow__up--currency");
+
+footerLanguague.addEventListener("click", () => {
+
+    
+    if (window.getComputedStyle(expandmenuLanguague).display === "none") {
+        expandmenuLanguague.classList.add("footer__bottombar__expandmenu--opened");
+        bottombarArrow.classList.add("bottombar__arrow__up--rotate");
+    } else {
+        expandmenuLanguague.classList.toggle("footer__bottombar__expandmenu--opened");
+        bottombarArrow.classList.toggle("bottombar__arrow__up--rotate")
+    };
+});
+
+
+footerCurrency.addEventListener("click", () => {
+    if (window.getComputedStyle(expandmenuCurrency).display === "none") {
+        expandmenuCurrency.style.display = "flex";
+        bottombarArrowCurrency.classList.add("bottombar__arrow__up--rotate")
+    } else {
+        expandmenuCurrency.style.display = "none";
+        bottombarArrowCurrency.classList.toggle("bottombar__arrow__up--rotate")
+    }
+});
+
+
+
+
+
