@@ -1016,13 +1016,21 @@ input[type=text]:focus {
   z-index: 10;
   flex: 4;
   background-color: whitesmoke;
-  transition: all 1s ease;
-  transform: scaleY(0);
+  animation: transformer 200ms ease-in-out;
 }
 
+@keyframes transformer {
+  from {
+    transform: scaleY(0.1);
+    transform-origin: bottom;
+  }
+  to {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
 .footer__bottombar__expandmenu--opened {
   display: flex;
-  transform: scaleY(1);
 }
 
 .footer__bottombar__expandmenu--currency {
@@ -1107,4 +1115,15 @@ input[type=text]:focus {
 
 .icon {
   padding-left: 10px;
+}
+
+.footer__notes {
+  padding-bottom: 100px;
+  display: flex;
+  align-content: center;
+}
+
+.footer__notes__text {
+  color: #FFF;
+  font-size: 0.7rem;
 }/*# sourceMappingURL=style.css.map */
