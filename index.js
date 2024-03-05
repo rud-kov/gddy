@@ -110,7 +110,7 @@ const footerLanguague = document.querySelector(".footer__bottombar__link--langua
 
 const footerCurrency = document.querySelector(".footer__bottombar__link--currency");
 
-const expandmenuLanguague = document.querySelector(".footer__bottombar__expandmenu");
+const expandmenuLanguage = document.querySelector(".footer__bottombar__expandmenu--language");
 
 const expandmenuCurrency = document.querySelector(".footer__bottombar__expandmenu--currency");
 
@@ -120,12 +120,11 @@ const bottombarArrowCurrency = document.querySelector(".bottombar__arrow__up--cu
 
 footerLanguague.addEventListener("click", () => {
 
-    
-    if (window.getComputedStyle(expandmenuLanguague).display === "none") {
-        expandmenuLanguague.classList.add("footer__bottombar__expandmenu--opened");
+    if (window.getComputedStyle(expandmenuLanguage).display === "none") {
+        expandmenuLanguage.classList.add("footer__bottombar__expandmenu--opened");
         bottombarArrow.classList.add("bottombar__arrow__up--rotate");
     } else {
-        expandmenuLanguague.classList.toggle("footer__bottombar__expandmenu--opened");
+        expandmenuLanguage.classList.toggle("footer__bottombar__expandmenu--opened");
         bottombarArrow.classList.toggle("bottombar__arrow__up--rotate")
     };
 });
@@ -133,15 +132,38 @@ footerLanguague.addEventListener("click", () => {
 
 footerCurrency.addEventListener("click", () => {
     if (window.getComputedStyle(expandmenuCurrency).display === "none") {
-        expandmenuCurrency.style.display = "flex";
+        expandmenuCurrency.classList.add("footer__bottombar__expandmenu--opened")
         bottombarArrowCurrency.classList.add("bottombar__arrow__up--rotate")
     } else {
-        expandmenuCurrency.style.display = "none";
+        expandmenuCurrency.classList.toggle("footer__bottombar__expandmenu--opened")
         bottombarArrowCurrency.classList.toggle("bottombar__arrow__up--rotate")
     }
 });
 
 
+/************** FOOTER CURRENCY & LANGUAGUE   */
+
+function expandMenuSwitch(buttons, control) {
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            control.innerHTML = button.innerHTML;
+        });
+    });
+}
 
 
+document.addEventListener("click", function(event) {
+    if (!footerLanguague.contains(event.target)) {
+        expandmenuLanguage.classList.toggle("footer__bottombar__expandmenu--opened");
+        bottombarArrow.classList.toggle("bottombar__arrow__up--rotate")
+    }
+})
 
+
+const currencyButtons = document.querySelectorAll(".expandmenu__currency__button");
+const currencyControl = document.querySelector(".currency__switch");
+expandMenuSwitch(currencyButtons, currencyControl);
+
+const languageButtons = document.querySelectorAll(".expandmenu__language__button");
+const languageControl = document.querySelector(".language__switch");
+expandMenuSwitch(languageButtons, languageControl);

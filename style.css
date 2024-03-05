@@ -947,9 +947,9 @@ input[type=text]:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 60px;
   flex-direction: column;
-  border-bottom: 1px solid whitesmoke;
+  box-shadow: 0 0 0 0.5px whitesmoke;
 }
 
 .footer__header__text {
@@ -1011,15 +1011,13 @@ input[type=text]:focus {
   position: absolute;
   display: none;
   bottom: 100%;
-  left: 0;
-  right: 0;
   z-index: 10;
   flex: 4;
   background-color: whitesmoke;
-  animation: transformer 200ms ease-in-out;
+  animation: expandmenu__rollup 200ms ease-in-out;
 }
 
-@keyframes transformer {
+@keyframes expandmenu__rollup {
   from {
     transform: scaleY(0.1);
     transform-origin: bottom;
@@ -1029,13 +1027,12 @@ input[type=text]:focus {
     transform-origin: bottom;
   }
 }
-.footer__bottombar__expandmenu--opened {
-  display: flex;
+.footer__bottombar__expandmenu--language {
+  left: 0;
+  right: 0;
 }
 
 .footer__bottombar__expandmenu--currency {
-  position: absolute;
-  bottom: 100%;
   display: none;
   width: 160px;
   height: 400px;
@@ -1043,13 +1040,26 @@ input[type=text]:focus {
   overflow: scroll;
 }
 
+.footer__bottombar__expandmenu--opened {
+  display: flex;
+}
+
 .bottombar__expandmenu__wrapper {
   padding: 2.5rem;
   display: flex;
   flex-basis: 100%;
   flex-direction: column;
+  animation: expandmenu__opacity 800ms ease-in-out;
 }
 
+@keyframes expandmenu__opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .bottombar__expandmenu__wrapper--currency {
   width: 160px;
   padding: 0;
@@ -1118,12 +1128,37 @@ input[type=text]:focus {
 }
 
 .footer__notes {
-  padding-bottom: 100px;
+  padding: 20px 3rem 40px;
   display: flex;
+  flex-direction: column;
   align-content: center;
+}
+
+.footer__notes__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 1.25rem;
 }
 
 .footer__notes__text {
   color: #FFF;
   font-size: 0.7rem;
+}
+
+.footer__notes__text--second {
+  margin: 1.25rem 0 0 0;
+}
+
+.footer__notes__links {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.footer__notes__links a {
+  white-space: nowrap;
+  font-size: 0.7rem;
+  color: #FFF;
 }/*# sourceMappingURL=style.css.map */
