@@ -6,7 +6,7 @@ const arrowMenu = document.querySelector(".header__link__arrowmenu");
 const rollArrowMenu = () => {
     arrowMenu.classList.toggle("header__link__arrowmenu--hidden");
     arrowDownSwitch.classList.toggle("header__link--arrow--opened");
-    arrowDownSwitch.classList.toggle("header__link--hovered");
+    arrowDownSwitch.classList.toggle("header__link--hoverable");
 }
 
 arrowDownSwitch.addEventListener("click", rollArrowMenu)
@@ -14,36 +14,36 @@ arrowDownSwitch.addEventListener("click", rollArrowMenu)
 
 /// HERO INPUT
 
-const heroInput = document.querySelector(".hero__input");
-const heroInputSecondary = document.querySelector(".hero__input--secondary")
-const heroSearchBar = document.querySelector(".hero__searchbar")
+const input = document.querySelector(".input");
+const inputSecondary = document.querySelector(".input--secondary")
+const searchBar = document.querySelector(".searchbar")
 
 
 const focusBlue = () => {
-    heroSearchBar.classList.add("hero__searchbar--focused")
+    searchBar.classList.add("searchbar--focused")
 }
 
 const unFocusBlue = () => {
-    heroSearchBar.classList.toggle("hero__searchbar--focused")
+    searchBar.classList.toggle("searchbar--focused")
 }
 
 
 const secondaryFocusBlue = () => {
-    heroInputSecondary.classList.add("hero__input--secondary--focused")
+    inputSecondary.classList.add("input--secondary--focused")
 }
 
 const secondaryunFocusBlue = () => {
-    heroInputSecondary.classList.toggle("hero__input--secondary--focused")
+    inputSecondary.classList.toggle("input--secondary--focused")
 }
 
 
-heroInputSecondary.addEventListener("focus", secondaryFocusBlue)
+inputSecondary.addEventListener("focus", secondaryFocusBlue)
 
-heroInputSecondary.addEventListener("blur", secondaryunFocusBlue)
+inputSecondary.addEventListener("blur", secondaryunFocusBlue)
 
-heroInput.addEventListener("focus", focusBlue);
+input.addEventListener("focus", focusBlue);
 
-heroInput.addEventListener("blur", unFocusBlue)
+input.addEventListener("blur", unFocusBlue)
 
 
 /* REVIEWS SECTION APPEARING *****************/
@@ -59,7 +59,7 @@ const options = {
 const observer = new IntersectionObserver(function(entries,observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            reviewsWrapper.classList.add("reviews__wrapper__opacityon")
+            reviewsWrapper.classList.add("reviews__wrapper--opacityon")
         }
     })
 }, options);
@@ -98,12 +98,12 @@ const faqArrows = document.querySelectorAll(".faq__summary__arrow");
 
 faqDetails.forEach((faqDetail, index) => {
     faqDetail.addEventListener("click", (event) => {
-        faqArrows[index].classList.toggle("faq__summary__arrow--open");
+        faqArrows[index].classList.toggle("arrow--open");
     });
 });
 
 
-/******** FOOTER LINKS *****////
+/************** FOOTER CURRENCY & LANGUAGUE   */
 
 
 const footerLanguague = document.querySelector(".footer__bottombar__link--languague");
@@ -121,27 +121,44 @@ const bottombarArrowCurrency = document.querySelector(".bottombar__arrow__up--cu
 footerLanguague.addEventListener("click", () => {
 
     if (window.getComputedStyle(expandmenuLanguage).display === "none") {
-        expandmenuLanguage.classList.add("footer__bottombar__expandmenu--opened");
-        bottombarArrow.classList.add("bottombar__arrow__up--rotate");
+        expandmenuLanguage.classList.add("open__menu");
+        bottombarArrow.classList.add("arrow--open");
     } else {
-        expandmenuLanguage.classList.toggle("footer__bottombar__expandmenu--opened");
-        bottombarArrow.classList.toggle("bottombar__arrow__up--rotate")
+        expandmenuLanguage.classList.toggle("open__menu");
+        bottombarArrow.classList.toggle("arrow--open")
     };
 });
 
 
 footerCurrency.addEventListener("click", () => {
     if (window.getComputedStyle(expandmenuCurrency).display === "none") {
-        expandmenuCurrency.classList.add("footer__bottombar__expandmenu--opened")
-        bottombarArrowCurrency.classList.add("bottombar__arrow__up--rotate")
+        expandmenuCurrency.classList.add("open__menu")
+        bottombarArrowCurrency.classList.add("arrow--open")
     } else {
-        expandmenuCurrency.classList.toggle("footer__bottombar__expandmenu--opened")
-        bottombarArrowCurrency.classList.toggle("bottombar__arrow__up--rotate")
+        expandmenuCurrency.classList.toggle("open__menu")
+        bottombarArrowCurrency.classList.toggle("arrow--open")
     }
 });
 
 
-/************** FOOTER CURRENCY & LANGUAGUE   */
+//function toggleMenuOff(menuEl, arrowEl) {
+//    if (!menuEl.contains(event.target)) {
+//        menuEl.classList.remove("open__menu")
+//        arrowEl.classList.remove("arrow--open")
+//        //console.log("clicked elsewhere")
+//    } 
+//}
+//
+//document.addEventListener("click", function(event) {
+//    toggleMenuOff(expandmenuLanguage, bottombarArrow);
+//}) 
+//
+//document.addEventListener("click", function(event) {
+//    toggleMenuOff(expandmenuCurrency, bottombarArrowCurrency);
+//})
+
+
+/******* CHANGING CURRENCY AND LANGUAGUE LINKS */
 
 function expandMenuSwitch(buttons, control) {
     buttons.forEach((button) => {
@@ -150,14 +167,6 @@ function expandMenuSwitch(buttons, control) {
         });
     });
 }
-
-
-document.addEventListener("click", function(event) {
-    if (!footerLanguague.contains(event.target)) {
-        expandmenuLanguage.classList.toggle("footer__bottombar__expandmenu--opened");
-        bottombarArrow.classList.toggle("bottombar__arrow__up--rotate")
-    }
-})
 
 
 const currencyButtons = document.querySelectorAll(".expandmenu__currency__button");

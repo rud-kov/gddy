@@ -24,18 +24,17 @@ a {
   color: #767676;
 }
 
-a:hover {
+a:hover,
+button:hover {
   cursor: pointer;
 }
 
 body {
   font-family: "Helvetica";
-  overflow-y: scroll;
 }
 
 /* HEADER */
 .header {
-  height: 64px;
   background-color: #2B2B2B;
 }
 
@@ -71,7 +70,6 @@ body {
 .header__logo {
   height: 32px;
   width: 143px;
-  display: flex;
 }
 
 .header__logo path {
@@ -201,7 +199,7 @@ body {
   height: 20px;
 }
 
-.header__link--hovered:hover {
+.header__link--hoverable:hover {
   background-color: #5E5E5E;
   border-radius: 8px;
 }
@@ -219,10 +217,6 @@ body {
   fill: #000;
 }
 
-.header__link--shopcart:hover {
-  background-color: unset;
-}
-
 /* BODYYY ****************/
 body {
   background-color: #FFF;
@@ -232,13 +226,13 @@ body {
   padding: 0 3rem;
 }
 
-.hero__searchbar {
+.searchbar {
   display: flex;
   flex: 2;
   outline: 1px solid #767676;
 }
 
-.hero__searchbar--focused {
+.searchbar--focused {
   outline: 3px solid blue;
 }
 
@@ -255,7 +249,7 @@ body {
   justify-content: space-between;
 }
 
-.hero__input {
+.input {
   flex: 2;
   height: 60px;
   border-width: 0px;
@@ -264,11 +258,11 @@ body {
   padding: 0 16px;
 }
 
-input[type=text]:focus {
+.input--third[type=text]:focus {
   outline: none;
 }
 
-.hero__input__button {
+.input__button {
   height: 60px;
   background-color: #00838C;
   color: white;
@@ -279,11 +273,11 @@ input[type=text]:focus {
   flex-basis: 160px;
 }
 
-.hero__input__button:hover {
+.input__button:hover {
   background-color: #09757A;
 }
 
-.hero__input__button p {
+.input__button p {
   white-space: nowrap;
   font-size: 1rem;
   letter-spacing: 0.5px;
@@ -297,7 +291,7 @@ input[type=text]:focus {
   gap: 8px;
 }
 
-.shop__icon {
+.hero__shop__icon {
   height: 33px;
 }
 
@@ -464,7 +458,7 @@ input[type=text]:focus {
   font-size: 0.9rem;
 }
 
-.service__content--warrow::after {
+.service__content--arrow::after {
   content: url("/arrow__right.svg");
   position: absolute;
   top: 0;
@@ -499,7 +493,7 @@ input[type=text]:focus {
   opacity: 1;
   right: -35px;
 }
-.hero__service:hover .service__content--warrow {
+.hero__service:hover .service__content--arrow {
   position: relative;
   right: 25px;
 }
@@ -509,11 +503,11 @@ input[type=text]:focus {
   padding: 5dvh 3rem;
 }
 
-.reviews__wrapper__opacityoff {
+.reviews__wrapper--opacityoff {
   opacity: 0;
 }
 
-.reviews__wrapper__opacityon {
+.reviews__wrapper--opacityon {
   opacity: 1;
   transform: translateY(20px);
   transition: opacity 1s ease-out, transform 0.5s ease-out;
@@ -554,7 +548,7 @@ input[type=text]:focus {
   border-radius: 8px;
 }
 
-.reviews__content {
+.reviews__box__content {
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -576,7 +570,6 @@ input[type=text]:focus {
 
 .review__star {
   width: 15px;
-  height: 15px;
 }
 
 .review__text {
@@ -596,7 +589,7 @@ input[type=text]:focus {
   justify-content: space-between;
 }
 
-.trustpilot__img {
+.review__trustpilot__img {
   height: 40px;
 }
 
@@ -637,7 +630,6 @@ input[type=text]:focus {
 
 .review__control__button:hover {
   background-color: #000;
-  cursor: pointer;
 }
 .review__control__button:hover .control__arrow {
   fill: #FFF;
@@ -725,7 +717,7 @@ input[type=text]:focus {
   transform-origin: top;
 }
 
-.rtb__special__buttons {
+.rtb__two__buttons {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -756,13 +748,13 @@ input[type=text]:focus {
   min-height: 35dvh;
 }
 
-.hero__searchbar--secondary {
+.searchbar--secondary {
   flex: 0;
   outline: none;
 }
 
-.hero__input--secondary--focused {
-  outline: 2px solid blue !important;
+.input--secondary--focused {
+  outline: 2px solid blue;
   outline-offset: -2px;
 }
 
@@ -770,7 +762,7 @@ input[type=text]:focus {
   font-size: 2rem;
 }
 
-.hero__input__button--secondary {
+.input__button--secondary {
   background: #000;
 }
 
@@ -826,7 +818,7 @@ input[type=text]:focus {
   gap: 15px;
 }
 
-.hero__searchbar--third {
+.searchbar--third {
   outline: 0.5px solid #767676;
 }
 
@@ -896,10 +888,6 @@ input[type=text]:focus {
   height: 25px;
   width: 25px;
   transition: transform 200ms;
-}
-
-.faq__summary__arrow--open {
-  transform: rotate(180deg);
 }
 
 .faq__details__li {
@@ -1040,10 +1028,6 @@ input[type=text]:focus {
   overflow: scroll;
 }
 
-.footer__bottombar__expandmenu--opened {
-  display: flex;
-}
-
 .bottombar__expandmenu__wrapper {
   padding: 2.5rem;
   display: flex;
@@ -1106,21 +1090,12 @@ input[type=text]:focus {
 }
 
 .bottombar__languague__column a:hover {
-  cursor: pointer;
   color: #1976d2;
-}
-
-.footer__bottombar__link:hover {
-  cursor: pointer;
 }
 
 .bottombar__arrow__up {
   width: 20px;
   transition: 500ms;
-}
-
-.bottombar__arrow__up--rotate {
-  transform: rotate(-180deg);
 }
 
 .icon {
@@ -1161,4 +1136,13 @@ input[type=text]:focus {
   white-space: nowrap;
   font-size: 0.7rem;
   color: #FFF;
+}
+
+/*********** SWITCHING DISPLAYS AND ROTATING ARROWS ********/
+.arrow--open {
+  transform: rotate(180deg);
+}
+
+.open__menu {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
