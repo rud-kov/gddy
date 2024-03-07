@@ -72,14 +72,10 @@ observer.observe(reviewsWrapper);
 
 const sideScroller = document.querySelector(".reviews__box__wrapper");
 
-//sideScroller.addEventListener("wheel", (event) => {
-//    event.preventDefault();
-//});
+// sideScroller.addEventListener("wheel", (event) => {
+//     event.preventDefault();
+// });
 
-// sideScroller.onscroll = function() {
-//     window.scrollTo(0,window.scrollX);
-//     console.log("píča")
-// }
 
 
 const controlButtonLeft = document.querySelector(".review__control__button--left").addEventListener("click", (event) => {
