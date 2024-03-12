@@ -879,7 +879,6 @@ body {
 
 .faq__wrapper summary {
   font-size: 1.5rem;
-  list-style: none;
   font-weight: bolder;
   display: flex;
   justify-content: space-between;
@@ -976,10 +975,6 @@ body {
   gap: 20px;
   padding-bottom: 50px;
   border-bottom: 1px solid whitesmoke;
-}
-
-.footer__bottombar__link--languague {
-  display: flex;
 }
 
 .footer__bottombar__left {
