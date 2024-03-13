@@ -218,6 +218,29 @@ body {
   }
 }
 
+/******** HEADER MOBILE *********/
+
+.header--mobile {
+  display: none;
+}
+
+.header__inner--mobile {
+  padding: 16px;
+}
+
+.header__message,
+.header__users,
+.header__shopcart {
+  height: 24px;
+  width: 24px;
+}
+
+
+
+
+
+
+
 /* BODYYY ****************/
 
 body {
@@ -896,7 +919,6 @@ body {
 
 .faq__wrapper summary {
   font-size: 1.5rem;
-  list-style: none;
   font-weight: bolder;
   display: flex;
   justify-content: space-between;
@@ -942,6 +964,8 @@ body {
   font-size: 1.2rem;
   letter-spacing: 2px;
 }
+
+/***** FOOTER *****/
 
 .footer {
   background-color: #000;
@@ -995,9 +1019,6 @@ body {
   border-bottom: 1px solid whitesmoke;
 }
 
-.footer__bottombar__link--languague {
-  display: flex;
-}
 
 .footer__bottombar__left {
   display: flex;
@@ -1169,3 +1190,17 @@ body {
   display: flex;
 }
 
+/*************** MOBILE QUERRIES *********/
+
+@media only screen and (max-width: 1200px) {
+  .header {
+    display: none;
+  }
+  .header--mobile {
+    display: block;
+  }
+
+
+
+
+}
