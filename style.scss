@@ -218,6 +218,29 @@ body {
   }
 }
 
+/******** HEADER MOBILE *********/
+
+.header--mobile {
+  display: none;
+}
+
+.header__inner--mobile {
+  padding: 16px;
+}
+
+.header__message,
+.header__users,
+.header__shopcart {
+  height: 24px;
+  width: 24px;
+}
+
+
+
+
+
+
+
 /* BODYYY ****************/
 
 body {
@@ -942,6 +965,8 @@ body {
   letter-spacing: 2px;
 }
 
+/***** FOOTER *****/
+
 .footer {
   background-color: #000;
 }
@@ -1165,3 +1190,17 @@ body {
   display: flex;
 }
 
+/*************** MOBILE QUERRIES *********/
+
+@media only screen and (max-width: 1200px) {
+  .header {
+    display: none;
+  }
+  .header--mobile {
+    display: block;
+  }
+
+
+
+
+}

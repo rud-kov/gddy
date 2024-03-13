@@ -26,7 +26,6 @@ const unFocusBlue = () => {
     searchBar.classList.toggle("searchbar--focused")
 }
 
-
 const secondaryFocusBlue = () => {
     inputSecondary.classList.add("input--secondary--focused")
 }
@@ -35,7 +34,6 @@ const secondaryunFocusBlue = () => {
     inputSecondary.classList.toggle("input--secondary--focused")
 }
 
-
 inputSecondary.addEventListener("focus", secondaryFocusBlue)
 
 inputSecondary.addEventListener("blur", secondaryunFocusBlue)
@@ -43,7 +41,6 @@ inputSecondary.addEventListener("blur", secondaryunFocusBlue)
 input.addEventListener("focus", focusBlue);
 
 input.addEventListener("blur", unFocusBlue)
-
 
 /* REVIEWS SECTION APPEARING *****************/
 
@@ -88,7 +85,6 @@ faqDetails.forEach((faqDetail, index) => {
     });
 });
 
-
 /************** FOOTER CURRENCY & LANGUAGUE EXPANDMENUS  */
 
 function expandableMenuSwitch(event) {
@@ -107,7 +103,7 @@ function expandableMenuSwitch(event) {
     })
 }
 
-const expandableLinks = document.querySelectorAll(".expandable__link");
+const expandableLinks = document.querySelectorAll(".footer__bottombar__link");
 
 document.addEventListener("click", expandableMenuSwitch);
 
