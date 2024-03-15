@@ -84,13 +84,16 @@ body {
 }
 
 .header__link {
-  color: #FFF;
-  padding: 8px 12px;
   font-size: 1rem;
   font-weight: 500;
   font-family:  Helvetica, Arial, sans-serif;
   white-space: nowrap;
   letter-spacing: 1px;
+}
+
+.header__link__button  {
+  padding: 8px 12px;
+  color: #FFF;
 }
 
 .header__link--divider {
@@ -108,36 +111,25 @@ body {
 .header__right__ul {
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 1rem;
 }
+
 
 .header__link--right {
   font-size: 0.8rem;
   font-weight: 400;
   margin-left: 8px;
-}
-
-.header__link--shopcart {
   display: flex;
   align-items: center;
-  padding: 8px 0 8px 12px;
 }
 
-.header__shopcart {
-  fill: #FFF;
-  height: 1.4rem;
-}
-
-.header__link--arrow {
+.header__link__button--arrow {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  position: relative;
 }
 
-.arrow__li {
-  position: relative;
+.link__arrow {
+  height: 15px;
 }
 
 .header__link__arrowmenu {
@@ -149,7 +141,7 @@ body {
   background-color: #FFF;
   z-index: 5;
   box-shadow: 0px 1px 8px rgba(118,118,118,0.3);
-  border-radius:4px;
+  border-radius: 4px;
 }
 
 .header__link__arrowmenu::before {
@@ -177,6 +169,7 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.3;
+  white-space: wrap;
 }
 
 .arrowmenu__link {
@@ -195,11 +188,7 @@ body {
   font-weight: 400;
 }
 
-.link__arrow {
-  height: 20px;
-}
-
-.header__link--hoverable:hover {
+.header__link--hoverable a:hover {
   background-color: #5E5E5E;
   border-radius: 8px;
 }
@@ -208,7 +197,7 @@ body {
   display: none;
 }
 
-.header__link--arrow--opened {
+.header__link__button--arrow--opened {
   background-color: #FFF;
   border-radius: 8px;
   color: #000;
@@ -216,6 +205,14 @@ body {
   .link__arrow path {
     fill: #000;
   }
+}
+
+.shopcart {
+  height: 25px;
+}
+
+.arrow__li {
+  position: relative;
 }
 
 /******** HEADER MOBILE *********/
@@ -234,12 +231,6 @@ body {
   height: 24px;
   width: 24px;
 }
-
-
-
-
-
-
 
 /* BODYYY ****************/
 
@@ -298,6 +289,10 @@ body {
   flex-basis: 160px;
 }
 
+.input__button--mobile {
+  display: none;
+}
+
 .input__button:hover {
   background-color: #09757A;
 }
@@ -308,6 +303,8 @@ body {
   letter-spacing: 0.5px;
   font-weight: 500;
 }
+
+
 
 .hero__price {
   display: flex;
@@ -1193,14 +1190,32 @@ body {
 /*************** MOBILE QUERRIES *********/
 
 @media only screen and (max-width: 1200px) {
-  .header {
+  .header,
+  .input__button--domains {
     display: none;
   }
   .header--mobile {
     display: block;
   }
 
+  .hero__wrapper {
+    padding: 0 16px;
+  }
 
+  .input {
+    font-size: 16px;
+  }
 
+  .input__button--mobile {
+    display: flex;
+    flex-basis: 52px;
+  }
 
+  .hero__price {
+    display: none;
+  }
+
+  .input__button__search {
+    height: 40px;
+  }
 }

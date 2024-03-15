@@ -1,12 +1,14 @@
-const arrowDownSwitch = document.querySelector(".header__link--arrow")
+const arrowDownSwitch = document.querySelector(".header__link__button--arrow")
 
 const arrowMenu = document.querySelector(".header__link__arrowmenu");
+
+const arrowLi = document.querySelector(".arrow__li");
 
 
 const rollArrowMenu = () => {
     arrowMenu.classList.toggle("header__link__arrowmenu--hidden");
-    arrowDownSwitch.classList.toggle("header__link--arrow--opened");
-    arrowDownSwitch.classList.toggle("header__link--hoverable");
+    arrowDownSwitch.classList.toggle("header__link__button--arrow--opened");
+    arrowLi.classList.toggle("header__link--hoverable");
 }
 
 arrowDownSwitch.addEventListener("click", rollArrowMenu)
