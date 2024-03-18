@@ -134,8 +134,16 @@ const hamburgerSwitches = document.querySelectorAll(".ham__switch");
 hamburgerSwitches.forEach((hamburgerSwitch) => {
     hamburgerSwitch.addEventListener("click", function(event) {
         hamburgerMenu.classList.toggle("hamburger__menu--opened");
+        body.classList.toggle("body__hamburger__on")
     })
 });
 
+// const mediaQuery = window.matchMedia("(min-width: 1200px)")
+// 
+// if (mediaQuery.matches) {
+//     body.classList.remove("body__hamburger__on")
+// }
+
+const body = document.querySelector(".body");
 
 const hamburgerMenu = document.querySelector(".hamburger__menu");
