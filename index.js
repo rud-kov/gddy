@@ -67,7 +67,6 @@ const observer = new IntersectionObserver(function(entries,observer) {
 observer.observe(reviewsWrapper);
 
 
-
 /// REVIEWS SIDESCROLLER
 
 const sideScroller = document.querySelector(".reviews__box__wrapper");
@@ -83,11 +82,11 @@ const sideScroller = document.querySelector(".reviews__box__wrapper");
 
 
 const controlButtonLeft = document.querySelector(".review__control__button--left").addEventListener("click", (event) => {
-    sideScroller.scrollLeft -= 200;
+    sideScroller.scrollLeft -= 500;
 });
 
 const controlButtonRight = document.querySelector(".review__control__button--right").addEventListener("click", (event) => {
-    sideScroller.scrollLeft += 200;
+    sideScroller.scrollLeft += 500;
 });
 
 
