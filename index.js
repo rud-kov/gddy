@@ -126,3 +126,16 @@ expandMenuSwitch(currencyButtons, currencyControl);
 const languageButtons = document.querySelectorAll(".expandmenu__language__button");
 const languageControl = document.querySelector(".language__switch");
 expandMenuSwitch(languageButtons, languageControl);
+
+/***** HAMBURGER MENU */
+
+const hamburgerSwitches = document.querySelectorAll(".ham__switch");
+
+hamburgerSwitches.forEach((hamburgerSwitch) => {
+    hamburgerSwitch.addEventListener("click", function(event) {
+        hamburgerMenu.classList.toggle("hamburger__menu--opened");
+    })
+});
+
+
+const hamburgerMenu = document.querySelector(".hamburger__menu");
