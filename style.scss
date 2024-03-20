@@ -329,6 +329,14 @@ body {
   align-items: center;
 }
 
+.hamburger__link--warrow:hover {
+  cursor: pointer;
+  .hamburger__link--warrow::after {
+    position: relative; //nefunguje 
+    right: 20px;
+  }
+}
+
 .header__logo__caption--mobile {
   color: #000;
 }
@@ -365,6 +373,16 @@ body {
 .hamburger__close__svg:hover {
   cursor: pointer;
 }
+
+.hamburger__insidemenu {
+  display: none;
+  z-index: 5;
+}
+
+.hamburger__insidemenu--open {
+  display: flex;
+}
+
 
 /* BODYYY ****************/
 
@@ -437,8 +455,6 @@ body {
   letter-spacing: 0.5px;
   font-weight: 500;
 }
-
-
 
 .hero__price {
   display: flex;
@@ -1351,5 +1367,46 @@ body {
 
   .input__button__search {
     height: 40px;
+  }
+}
+
+
+@media only screen and (max-width: 760px) {
+  .hero__offer__wrapper {
+    flex-direction: column;
+  }
+
+  .hero__offer--left {
+    min-height: 559px;    
+    background-image: url("/mobile__hp-portrait.webp");
+    background-size: cover;
+    background-position: center 80%;
+  }
+
+  .hero__content--left {
+    text-align: center;
+    max-width: unset;
+    padding: unset;
+  }
+
+  .hero__headline--left {
+    font-size: 1.5rem;
+  }
+
+  .hero__left__description {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
+  .hero__disclaimer--left {
+    font-size: 0.8rem;
+  }
+
+  .hero__content--right > div {
+    text-align: left;
+  }
+
+  .hero__offer__button__wrapper {
+    display: none;
   }
 }

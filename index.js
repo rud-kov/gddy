@@ -138,6 +138,15 @@ hamburgerSwitches.forEach((hamburgerSwitch) => {
     })
 });
 
+const insideHamSwitches = document.querySelectorAll(".hamburger__link--warrow");
+
+insideHamSwitches.forEach((insideHamSwitch) => {
+    insideHamSwitch.addEventListener("click", function(event) {
+        insideHamSwitch.querySelector(".hamburger__insidemenu").classList.toggle("hamburger__insidemenu--open")
+    })
+});
+
+
 // const mediaQuery = window.matchMedia("(min-width: 1200px)")
 // 
 // if (mediaQuery.matches) {
