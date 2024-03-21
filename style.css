@@ -627,7 +627,7 @@ body {
   content: url("/arrow__right.svg");
   position: absolute;
   top: 0;
-  right: -25px;
+  right: -15px;
   height: 100%;
   opacity: 0;
   display: flex;
@@ -656,7 +656,6 @@ body {
 }
 .hero__service:hover .service__content::after {
   opacity: 1;
-  right: -35px;
 }
 .hero__service:hover .service__content--arrow {
   position: relative;
@@ -1336,6 +1335,11 @@ body {
   }
 }
 @media only screen and (max-width: 760px) {
+  .hero__offer__button__wrapper,
+  .hero__description--right,
+  .hero__headline--right br {
+    display: none;
+  }
   .hero__offer__wrapper {
     flex-direction: column;
   }
@@ -1350,7 +1354,8 @@ body {
     max-width: unset;
     padding: unset;
   }
-  .hero__headline--left {
+  .hero__headline--left,
+  .hero__headline--right {
     font-size: 1.5rem;
   }
   .hero__left__description {
@@ -1360,10 +1365,32 @@ body {
   .hero__disclaimer--left {
     font-size: 0.8rem;
   }
+  .hero__offer--right {
+    align-items: start;
+    position: relative;
+  }
+  .hero__content--right {
+    padding: 16px 32px;
+    max-width: 50%;
+  }
+  .hero__offer--right::after {
+    content: url("/arrow__right--black--big.svg");
+    position: absolute;
+    right: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    transform: scale(1.4);
+  }
   .hero__content--right > div {
     text-align: left;
+    margin: 0 0px 16px;
   }
-  .hero__offer__button__wrapper {
-    display: none;
+  .hero__services__grid {
+    grid-auto-flow: row dense;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero__service--last {
+    grid-column: span 2;
   }
 }/*# sourceMappingURL=style.css.map */

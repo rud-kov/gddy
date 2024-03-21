@@ -639,7 +639,7 @@ body {
   content: url("/arrow__right.svg");
   position: absolute;
   top: 0;
-  right: -25px;
+  right: -15px;
   height: 100%;
   opacity: 0;
   display: flex;
@@ -668,7 +668,6 @@ body {
 
   .service__content::after {
     opacity: 1;
-    right: -35px;
   }
 
   .service__content--arrow {
@@ -1372,6 +1371,13 @@ body {
 
 
 @media only screen and (max-width: 760px) {
+
+  .hero__offer__button__wrapper,
+  .hero__description--right,
+  .hero__headline--right br {
+    display: none;
+  }
+
   .hero__offer__wrapper {
     flex-direction: column;
   }
@@ -1389,7 +1395,8 @@ body {
     padding: unset;
   }
 
-  .hero__headline--left {
+  .hero__headline--left,
+  .hero__headline--right {
     font-size: 1.5rem;
   }
 
@@ -1402,11 +1409,37 @@ body {
     font-size: 0.8rem;
   }
 
-  .hero__content--right > div {
-    text-align: left;
+  .hero__offer--right {
+    align-items: start;
+    position: relative;
+  } 
+
+  .hero__content--right {
+    padding: 16px 32px;
+    max-width: 50%;
   }
 
-  .hero__offer__button__wrapper {
-    display: none;
+  .hero__offer--right::after {
+    content: url("/arrow__right--black--big.svg");
+    position: absolute;
+    right: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    transform: scale(1.4);
+  }
+
+  .hero__content--right > div {
+    text-align: left;
+    margin: 0 0px 16px;
+  }
+
+  .hero__services__grid {
+    grid-auto-flow: row dense;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__service--last {
+    grid-column: span 2;
   }
 }
