@@ -1366,4 +1366,11 @@ body {
   .hero__offer__button__wrapper {
     display: none;
   }
+  .hero__services__grid {
+    grid-auto-flow: row dense;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero__service--last {
+    grid-column: span 2;
+  }
 }/*# sourceMappingURL=style.css.map */
