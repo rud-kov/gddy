@@ -628,12 +628,13 @@ body {
 .hero__service--arrow::after {
   content: url("/arrow__right.svg");
   position: absolute;
+  opacity: 0;
   top: 0;
   right: 20px;
   height: 100%;
   display: flex;
   align-items: center;
-  transition: all 300ms;
+  transition: opacity 100ms;
 }
 
 .service__headline,
@@ -655,12 +656,13 @@ body {
   border-right: 0.5px solid #111;
   border-bottom: 0.5px solid;
 }
-.hero__service:hover .hero__service--arrow::after {
-  opacity: 1;
-}
 .hero__service:hover .service__content--arrow {
   position: relative;
   right: 25px;
+}
+
+.hero__service:hover::after {
+  opacity: 1;
 }
 
 /* REVIEWS PART */
