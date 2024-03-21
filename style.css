@@ -587,6 +587,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr 1.2fr;
   grid-template-rows: repeat(2, minmax(3rem, 1fr));
   border-top: 0.5px solid #D6D6D6;
+  position: relative;
 }
 
 .hero__service {
@@ -598,6 +599,7 @@ body {
   align-items: center;
   padding: 1.5rem;
   transition: all 500ms;
+  position: relative;
 }
 
 .hero__service--almostlast {
@@ -623,16 +625,15 @@ body {
   font-size: 0.9rem;
 }
 
-.service__content--arrow::after {
+.hero__service--arrow::after {
   content: url("/arrow__right.svg");
   position: absolute;
   top: 0;
-  right: -15px;
+  right: 20px;
   height: 100%;
-  opacity: 0;
   display: flex;
   align-items: center;
-  transition: all 500ms;
+  transition: all 300ms;
 }
 
 .service__headline,
@@ -654,7 +655,7 @@ body {
   border-right: 0.5px solid #111;
   border-bottom: 0.5px solid;
 }
-.hero__service:hover .service__content::after {
+.hero__service:hover .hero__service--arrow::after {
   opacity: 1;
 }
 .hero__service:hover .service__content--arrow {
@@ -1335,11 +1336,6 @@ body {
   }
 }
 @media only screen and (max-width: 760px) {
-  .hero__offer__button__wrapper,
-  .hero__description--right,
-  .hero__headline--right br {
-    display: none;
-  }
   .hero__offer__wrapper {
     flex-direction: column;
   }
@@ -1354,8 +1350,7 @@ body {
     max-width: unset;
     padding: unset;
   }
-  .hero__headline--left,
-  .hero__headline--right {
+  .hero__headline--left {
     font-size: 1.5rem;
   }
   .hero__left__description {
@@ -1365,32 +1360,10 @@ body {
   .hero__disclaimer--left {
     font-size: 0.8rem;
   }
-  .hero__offer--right {
-    align-items: start;
-    position: relative;
-  }
-  .hero__content--right {
-    padding: 16px 32px;
-    max-width: 50%;
-  }
-  .hero__offer--right::after {
-    content: url("/arrow__right--black--big.svg");
-    position: absolute;
-    right: 30px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    transform: scale(1.4);
-  }
   .hero__content--right > div {
     text-align: left;
-    margin: 0 0px 16px;
   }
-  .hero__services__grid {
-    grid-auto-flow: row dense;
-    grid-template-columns: 1fr 1fr;
-  }
-  .hero__service--last {
-    grid-column: span 2;
+  .hero__offer__button__wrapper {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
