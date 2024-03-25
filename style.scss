@@ -733,9 +733,9 @@ body {
 
 .reviews__box {
   background-color: whitesmoke;
-  display: grid;
+  display: flex;
   border-radius: 8px;
-  min-width: min-content;
+  //min-width: min-content;
   margin-right: 20px;
 }
 
@@ -857,8 +857,8 @@ body {
 
 .rtb__image {
   width: 100%;
-  min-width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
 }
 
 .rtb__text__container {
@@ -1357,7 +1357,9 @@ body {
     display: block;
   }
 
-  .hero__wrapper {
+  .hero__wrapper,
+  .reviews__wrapper,
+  .rtb {
     padding: 0 16px;
   }
 
@@ -1381,13 +1383,18 @@ body {
   .reviews__box__content {
     padding: 20px;
   }
+
+  
 }
 
 
 @media only screen and (max-width: 760px) {
   .hero__offer__button__wrapper,
   .hero__description--right,
-  .hero__headline--right br {
+  .hero__headline--right br,
+  .reviews__controller__wrapper,
+  .reviews__bottom__subline span
+  .reviews__mainhl br {
     display: none;
   }
 
@@ -1465,5 +1472,41 @@ body {
 
   .hero__service--last {
     grid-column: span 2;
+  }
+
+  .reviews__box__wrapper {
+    overflow: scroll; /// ?
+  }
+
+  .reviews__bottom__subline {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .review__trustpilot__img {
+    width: 110px;
+    height: 26px;
+  }
+
+  .reviews__mainhl {
+    font-size: 1.8rem;
+  }
+
+  .review__star--general {
+    width: 20px;
+    height: 20px;
+  }
+
+  .reviews__bottom__subline {
+    font-size: 0.75rem;
+  }
+
+  .rtb__block {
+    flex-direction: column;
+  }
+
+  .rtb__block:nth-child(2),
+  .rtb__block:nth-child(4) {
+    flex-flow: column-reverse;
   }
 }
