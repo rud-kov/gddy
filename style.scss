@@ -1567,9 +1567,14 @@ body {
     gap: 20px;
   }
 
-  .guide__jamila--mobile,
   .guide__content--mobile {
     display: flex;
+  }
+
+  .guide__jamila--mobile {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   .input--third {
