@@ -115,6 +115,7 @@ function expandMenuSwitch(buttons, control) {
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
             control.innerHTML = button.innerHTML;
+            button.classList.toggle("expandmenu__currency__button--selected")
         });
     });
 }
