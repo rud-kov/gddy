@@ -305,6 +305,8 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   flex: 2;
+  z-index: 10;
+  position: relative;
 }
 
 .hamburger__logo__wrapper {
@@ -321,6 +323,7 @@ body {
   padding: 24px 0 24px;
   font-size: 1.1rem;
   position: relative;
+  z-index: 10;
 }
 
 .hamburger__link--warrow::after {
@@ -384,9 +387,6 @@ body {
 
 .hamburger__insidemenu {
   display: none;
-  z-index: 5;
-  //background-color: #F5F5F5;
-  background-color: red;
 }
 
 .hamburger__insidemenu--open {
@@ -398,10 +398,12 @@ body {
   bottom: 0;
   right: 0;
   z-index: 600;
+  background-color: red;
 }
 
 .insidemenu__content {
   padding: 16px;
+  background-color: red;
 }
 
 .insidemenu__chevron {
