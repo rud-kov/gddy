@@ -70,10 +70,12 @@ const sideScroller = document.querySelector(".reviews__box__wrapper");
 
 const controlButtonLeft = document.querySelector(".review__control__button--left").addEventListener("click", (event) => {
     sideScroller.scrollLeft -= 200;
+    console.log("česnek")
 });
 
 const controlButtonRight = document.querySelector(".review__control__button--right").addEventListener("click", (event) => {
     sideScroller.scrollLeft += 200;
+    console.log("cibule")
 });
 
 ////  FAQ ARROWS... 

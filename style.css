@@ -742,11 +742,11 @@ body {
 /* REVIEWS PART */
 .reviews__wrapper {
   padding: 5dvh 3rem;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .reviews__inner__wrapper {
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .reviews__wrapper--opacityoff {
@@ -771,7 +771,6 @@ body {
   grid-auto-flow: column;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 1rem;
-  grid-template-rows: auto;
 }
 
 .reviews__box__wrapper::-webkit-scrollbar {

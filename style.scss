@@ -756,11 +756,11 @@ body {
 
 .reviews__wrapper {
   padding: 5dvh 3rem;
-  overflow-x: scroll; // or hidden?
+  overflow-x: hidden; // or hidden?
 }
 
 .reviews__inner__wrapper {
-  overflow-x: scroll; // přidaný nově
+  overflow-x: hidden; // přidaný nově
 }
 
 .reviews__wrapper--opacityoff {
@@ -785,7 +785,6 @@ body {
   grid-auto-flow: column;
   grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
   gap: 1rem;
-  grid-template-rows: auto;
 }
 
 .reviews__box__wrapper::-webkit-scrollbar {
@@ -798,7 +797,7 @@ body {
 }
 
 .reviews__box__wrapper--snap > * {
-  scroll-snap-align: start;
+  scroll-snap-align: start; 
 }
 
 .reviews__box {
@@ -1602,7 +1601,7 @@ body {
   }
 
   .reviews__box__wrapper {
-    overflow: scroll; /// ?
+    overflow: scroll;
   }
 
   .reviews__bottom__subline {
