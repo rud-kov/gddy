@@ -386,13 +386,25 @@ body {
 
 .hamburger__insidemenu--open {
   display: flex;
-  position: absolute;
+  flex-direction: column;
+  position: fixed;
   height: 100%;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
   z-index: 600;
+  background-color: red;
+}
+
+.testmenu {
+  position: relative;
+  padding: 16px;
+  top: 0;
+  right: 0;
+  width: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 3;
   background-color: red;
 }
 
@@ -745,11 +757,11 @@ body {
 /* REVIEWS PART */
 .reviews__wrapper {
   padding: 5dvh 3rem;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .reviews__inner__wrapper {
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .reviews__wrapper--opacityoff {
@@ -769,7 +781,7 @@ body {
 }
 
 .reviews__box__wrapper {
-  max-width: 100%;
+  overflow: scroll;
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -795,7 +807,6 @@ body {
   display: flex;
   border-radius: 8px;
   min-width: 350px;
-  margin: 0 10px;
 }
 
 .reviews__box__content {
@@ -1546,9 +1557,6 @@ body {
   }
   .hero__service--last {
     grid-column: span 2;
-  }
-  .reviews__box__wrapper {
-    overflow: scroll;
   }
   .reviews__bottom__subline {
     flex-wrap: wrap;
