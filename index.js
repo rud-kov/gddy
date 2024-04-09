@@ -143,7 +143,8 @@ const insideHamSwitches = document.querySelectorAll(".hamburger__link--warrow");
 
 insideHamSwitches.forEach((insideHamSwitch) => {
     insideHamSwitch.addEventListener("click", function(event) {
-        insideHamSwitch.querySelector(".hamburger__insidemenu").classList.toggle("hamburger__insidemenu--open")
+        //insideHamSwitch.querySelector(".hamburger__insidemenu").classList.toggle("hamburger__insidemenu--open")
+    document.querySelector(".hamburger__insidemenu").classList.toggle("hamburger__insidemenu--open")
     })
 });
 
