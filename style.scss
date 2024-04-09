@@ -266,7 +266,7 @@ body {
 
 .hamburger__menu {
   display: none;
-  position: absolute;
+  position: fixed;
   flex-direction: row;
   left: 0;
   top: 0;
@@ -284,7 +284,6 @@ body {
   display: flex;
   animation: slidein 400ms;
   flex: 3;
-  min-width: 250px;
 }
 
 @keyframes slidein {
@@ -306,7 +305,6 @@ body {
   flex-wrap: wrap;
   flex: 2;
   z-index: 10;
-  position: relative;
 }
 
 .hamburger__logo__wrapper {
@@ -315,6 +313,8 @@ body {
 }
 
 .hamburger__links {
+  display: flex; //
+  flex-direction: column; //
   margin: 50px 0;
   flex: 2;
 }
@@ -381,10 +381,6 @@ body {
   cursor: pointer;
 }
 
-.hamburger__link__button {
-  position: relative;
-}
-
 .hamburger__insidemenu {
   display: none;
 }
@@ -397,31 +393,26 @@ body {
   top: 0;
   left: 0;
   z-index: 600;
-  background-color: red;
-}
-
-.testmenu {
-  position: relative;
-  padding: 16px;
-  top: 0;
-  right: 0;
-  width: 100%;
-  left: 0;
-  display: flex;
-  flex-direction: column;
+  background-color: #767676;
+  animation: slidein 400ms;
   flex: 3;
-  background-color: red;
-  
 }
 
 .insidemenu__content {
   padding: 16px;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 3;
 }
 
 .insidemenu__chevron {
   width: 35px;
 }
+
+.insidemenu__chevron:hover {
+  cursor: pointer;
+} 
 
 .insidemenu__headline {
   text-transform: uppercase;
