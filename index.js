@@ -133,17 +133,15 @@ const insideHamSwitches = document.querySelectorAll(".hamburger__link--warrow");
 
 insideHamSwitches.forEach((insideHamSwitch) => {
     insideHamSwitch.addEventListener("click", function(event) {
-        //insideHamSwitch.querySelector(".hamburger__insidemenu").classList.toggle("hamburger__insidemenu--open")
         document.querySelector(".hamburger__insidemenu").classList.toggle("hamburger__insidemenu--open")
     })
 });
 
 const secondLevelMenuSwitches = document.querySelectorAll(".insidemenu__chevron");
 
-
 secondLevelMenuSwitches.forEach((secondLevelMenuSwitch) => {
     secondLevelMenuSwitch.addEventListener("click", function(event) {
-        document.querySelector(".hamburger__insidemenu").classList.toggle("hamburger__insidemenu--open")
+        document.querySelector(".hamburger__insidemenu").classList.remove("hamburger__insidemenu--open")
     })
 });
 

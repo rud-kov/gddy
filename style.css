@@ -280,7 +280,7 @@ body {
   display: flex;
   animation: slidein 400ms;
   flex: 3;
-  max-width: 450px;
+  max-width: 400px;
 }
 
 @keyframes slidein {
@@ -318,6 +318,7 @@ body {
   padding: 24px 0 24px;
   font-size: 1.1rem;
   position: relative;
+  display: flex;
   z-index: 10;
 }
 
@@ -380,13 +381,15 @@ body {
 .hamburger__insidemenu {
   display: none;
   flex-direction: column;
-  position: fixed;
-  height: 100%;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 450px;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
   z-index: 600;
-  background-color: #767676;
+  background-color: whitesmoke;
   animation: slidein 400ms;
   flex: 3;
 }
@@ -396,7 +399,6 @@ body {
 }
 
 .insidemenu__content {
-  padding: 16px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -420,6 +422,7 @@ body {
 
 .insidemenu__row {
   display: flex;
+  white-space: wrap;
   gap: 10px;
   align-items: center;
   padding: 6px 12px;
@@ -442,7 +445,6 @@ body {
 }
 
 .insidemenu__banner {
-  min-width: 300px;
   width: 100%;
   min-height: 200px;
   height: 100%;
