@@ -280,6 +280,7 @@ body {
   display: flex;
   animation: slidein 400ms;
   flex: 3;
+  max-width: 450px;
 }
 
 @keyframes slidein {
@@ -378,19 +379,20 @@ body {
 
 .hamburger__insidemenu {
   display: none;
-}
-
-.hamburger__insidemenu--open {
-  display: flex;
   flex-direction: column;
   position: fixed;
   height: 100%;
   top: 0;
   left: 0;
+  width: 450px;
   z-index: 600;
   background-color: #767676;
   animation: slidein 400ms;
   flex: 3;
+}
+
+.hamburger__insidemenu--open {
+  display: flex;
 }
 
 .insidemenu__content {
