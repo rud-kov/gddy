@@ -129,21 +129,25 @@ hamburgerSwitches.forEach((hamburgerSwitch) => {
     })
 });
 
-const insideHamSwitches = document.querySelectorAll(".hamburger__link--warrow");
+const insideHamSwitches = document.querySelectorAll(".hamburger__link__button--arrow");
 
 insideHamSwitches.forEach((insideHamSwitch) => {
     insideHamSwitch.addEventListener("click", function(event) {
-        document.querySelector(".hamburger__insidemenu").classList.toggle("hamburger__insidemenu--open")
+        insideHamSwitch.nextElementSibling.classList.add("hamburger__insidemenu--open");
     })
 });
+
+
 
 const secondLevelMenuSwitches = document.querySelectorAll(".insidemenu__chevron");
 
 secondLevelMenuSwitches.forEach((secondLevelMenuSwitch) => {
-    secondLevelMenuSwitch.addEventListener("click", function(event) {
-        document.querySelector(".hamburger__insidemenu").classList.remove("hamburger__insidemenu--open")
+    secondLevelMenuSwitch.addEventListener("click", function(event) {        
+        secondLevelMenuSwitch.closest(".hamburger__insidemenu").classList.remove("hamburger__insidemenu--open");
     })
 });
+
+
 
 //const secondLevelMenu = document.querySelectorAll(".hamburger__insidemenu");
 
