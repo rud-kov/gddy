@@ -76,16 +76,6 @@ const controlButtonRight = document.querySelector(".review__control__button--rig
     sideScroller.scrollLeft += 200;
 });
 
-////  FAQ ARROWS... 
-
-const faqDetails = document.querySelectorAll(".faq__details");
-const faqArrows = document.querySelectorAll(".faq__summary__arrow");
-
-faqDetails.forEach((faqDetail, index) => {
-    faqDetail.addEventListener("click", (event) => {
-        faqArrows[index].classList.toggle("arrow--open");
-    });
-});
 
 /************** FOOTER CURRENCY & LANGUAGUE EXPANDMENUS  */
 
@@ -156,8 +146,6 @@ secondLevelMenuSwitches.forEach((secondLevelMenuSwitch) => {
         document.querySelector(".hamburger__insidemenu").classList.toggle("hamburger__insidemenu--open")
     })
 });
-
-
 
 //const secondLevelMenu = document.querySelectorAll(".hamburger__insidemenu");
 
