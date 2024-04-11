@@ -21,7 +21,6 @@ a {
   vertical-align: baseline;
   background: transparent;
   text-decoration: none;
-  color: #767676;
 }
 
 a:hover,
@@ -355,7 +354,7 @@ body {
   gap: 20px;
 }
 
-.hamburger__bottomlink {
+.hamburger__bottomlink a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -396,8 +395,11 @@ body {
   min-width: 250px;
   z-index: 600;
   background-color: whitesmoke;
-  animation: slidein 400ms;
   flex: 3;
+}
+
+.hamburger__insidemenu--webhosting {
+  overflow: scroll;
 }
 
 .hamburger__insidemenu--open {
@@ -407,11 +409,24 @@ body {
 .insidemenu__content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-wrap: wrap;
   flex: 3;
   padding: 16px;
+  opacity: 1;
+  animation: opacitySlide 800ms;
 }
 
+@keyframes opacitySlide {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 .insidemenu__chevron {
   width: 35px;
 }
@@ -457,6 +472,8 @@ body {
   margin: 15px 0 0 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  margin: 0 12px;
 }
 
 .insidemenu__banner {
@@ -467,6 +484,16 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 535px 440px;
+  transition: background-size 400ms ease-in-out;
+}
+
+.insidemenu__banner--webhosting {
+  background-image: url("/img-meganav-ecommerce-hosting.webp");
+}
+
+.insidemenu__banner--marketing {
+  background-image: url("/Image-Grow-Desktop.webp");
+  background-size: 400px 340px;
 }
 
 .insidemenu__banner__link {
@@ -475,8 +502,12 @@ body {
   margin: 10px 0 0 0;
 }
 
-.insidemenu__banner__link:hover {
+.insidemenu__content__chapter--banner:hover .insidemenu__banner__link {
   text-decoration: underline;
+}
+
+.insidemenu__content__chapter--banner:hover .insidemenu__banner {
+  background-size: 635px 540px;
 }
 
 /* BODYYY ****************/
