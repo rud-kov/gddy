@@ -32,11 +32,6 @@ body {
   margin: 0 auto;
 }
 
-/**** GENERAL STYLING ****/////
-
-
-
-
 
 /* HEADER */
 
@@ -55,7 +50,6 @@ body {
   padding: 0 3rem;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
   flex: 3;
   justify-content: space-between;
 }
@@ -110,7 +104,6 @@ body {
 
 .header__inner__right {
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -119,7 +112,6 @@ body {
   flex-direction: row;
   gap: 1rem;
 }
-
 
 .header__link--right {
   font-size: 0.8rem;
@@ -156,7 +148,6 @@ body {
   top: -10px;
   right: 0;
   width: 0;
-  height: 0;
   border-bottom: 12px solid #FFF;
   border-left: 22px solid transparent;
   border-right: 22px solid transparent;
@@ -247,7 +238,6 @@ body {
   gap: 20px;
 }
 
-
 .header__logo__link--hamburger {
   display: flex;
   flex: 2; 
@@ -289,7 +279,7 @@ body {
   display: flex;
 };
 
-.hamburger__submenu__left { // jen tady se řeší vlevo. 
+.hamburger__submenu__left {
   display: flex;
   animation: slidein 400ms;
   flex: 3;
@@ -306,7 +296,6 @@ body {
     transform: translateX(0px)
   }
 }
-
 
 .hamburger__menu__content {
   background-color: #FFF;
@@ -326,8 +315,8 @@ body {
 }
 
 .hamburger__links {
-  display: flex; //
-  flex-direction: column; //
+  display: flex; 
+  flex-direction: column; 
   margin: 50px 0;
   flex: 2;
   position: static;
@@ -419,7 +408,6 @@ body {
   overflow: scroll;
 }
 
-
 .hamburger__insidemenu--open {
   display: flex;
 }
@@ -435,7 +423,6 @@ body {
   animation: opacitySlide 800ms;
 }
 
-
 @keyframes opacitySlide {
   from {
     opacity: 0;
@@ -446,7 +433,6 @@ body {
     transform: translateX(0px)
   }
 }
-
 
 .insidemenu__chevron {
   width: 35px;
