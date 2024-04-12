@@ -29,7 +29,14 @@ button:hover {
 
 body {
   font-family: "Helvetica";
+  margin: 0 auto;
 }
+
+/**** GENERAL STYLING ****/////
+
+
+
+
 
 /* HEADER */
 
@@ -44,6 +51,7 @@ body {
 }
 
 .header__inner {
+  max-width: 2500px;
   padding: 0 3rem;
   margin: 0 auto;
   display: flex;
@@ -531,7 +539,9 @@ body {
 }
 
 .hero__wrapper {
+  max-width: 2500px;
   padding: 0 3rem;
+  margin: 0 auto;
 }
 
 .searchbar {
@@ -821,8 +831,10 @@ body {
 /* REVIEWS PART */
 
 .reviews__wrapper {
+  max-width: 2500px;
   padding: 5dvh 3rem;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 
 .reviews__inner__wrapper {
@@ -975,6 +987,8 @@ body {
 /* RTB BLOCK */
 
 .rtb {
+  margin: 0 auto;
+  max-width: 2500px;
   padding: 60px 3rem;
 }
 
@@ -1076,6 +1090,8 @@ body {
   display: flex;
   align-content: center;
   min-height: 35dvh;
+  margin: 0 auto;
+  max-width: 2500px;
 }
 
 .domain__content {
@@ -1130,6 +1146,8 @@ body {
   align-items: center;
   background-clip: padding-box;
   position: relative;
+  margin: 0 auto;
+  max-width: 2500px;
 }
 
 .guide__figcaption {
@@ -1193,10 +1211,12 @@ body {
 
 .faq {
   margin: 200px 0 0 0;
+  margin: 0 auto;
+  max-width: 2500px;
 }
 
 .faq__wrapper {
-  margin: 0 auto;
+  margin: 50px auto;
   text-align: left;
   max-width: 800px;
 }
@@ -1311,7 +1331,8 @@ body {
   align-items: center;
   height: 60px;
   flex-direction: column;
-  box-shadow: 0 0 0 0.5px whitesmoke;
+  box-shadow: 0 0.5px 0 0 whitesmoke;
+  max-width: 2500px;
 }
 
 .footer__header__text {
@@ -1324,6 +1345,8 @@ body {
   flex-direction: row;
   justify-content: space-between;
   gap: 50px;
+  margin: 0 auto;
+  max-width: 2500px;
 }
 
 .footer__column__wrapper--mobile {
@@ -1353,6 +1376,8 @@ body {
   gap: 20px;
   padding-bottom: 50px;
   border-bottom: 1px solid whitesmoke;
+  max-width: 2500px;
+  margin: 0 auto;
 }
 
 
@@ -1493,6 +1518,8 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
+  margin: 0 auto;
+  max-width: 2500px;
 }
 
 .footer__notes__wrapper {
