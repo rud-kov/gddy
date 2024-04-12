@@ -104,8 +104,18 @@ document.addEventListener("click", expandableMenuSwitch);
 function expandMenuSwitch(buttons, control) {
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
+            buttons.forEach((otherButton) => {
+                if (otherButton != button) {
+                    otherButton.classList.remove("expandmenu__currency__button--selected", "expandmenu__language__button--selected")
+                }
+            })
             control.innerHTML = button.innerHTML;
-            button.classList.toggle("expandmenu__currency__button--selected")
+
+            if (button.classList.contains("expandmenu__currency__button")) {
+                button.classList.add("expandmenu__currency__button--selected");
+            } else {
+                button.classList.add("expandmenu__language__button--selected");
+            }
         });
     });
 }
@@ -114,9 +124,11 @@ const currencyButtons = document.querySelectorAll(".expandmenu__currency__button
 const currencyControl = document.querySelector(".currency__switch");
 expandMenuSwitch(currencyButtons, currencyControl);
 
+
 const languageButtons = document.querySelectorAll(".expandmenu__language__button");
 const languageControl = document.querySelector(".language__switch");
 expandMenuSwitch(languageButtons, languageControl);
+
 
 /***** HAMBURGER MENU */
 
@@ -136,7 +148,6 @@ insideHamSwitches.forEach((insideHamSwitch) => {
         insideHamSwitch.nextElementSibling.classList.add("hamburger__insidemenu--open");
     })
 });
-
 
 
 const secondLevelMenuSwitches = document.querySelectorAll(".insidemenu__chevron");

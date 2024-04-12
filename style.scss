@@ -1471,7 +1471,6 @@ body {
 .bottombar__languague__column a {
   font-size: 0.9rem;
   font-weight: bolder;
-  color: #000;
 }
 
 .expandmenu__currency__button {
@@ -1502,6 +1501,12 @@ body {
 
 .bottombar__languague__column a:hover {
   color: #1976d2;
+}
+
+.expandmenu__language__button--selected {
+  text-decoration: underline;
+  color: #1A76D0;
+  font-weight: bolder;
 }
 
 .bottombar__arrow__up {
