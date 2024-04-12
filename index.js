@@ -160,9 +160,7 @@ secondLevelMenuSwitches.forEach((secondLevelMenuSwitch) => {
     })
 });
 
-
 /***** QUERRIES FOR SWITCHING OF HAMB. ETC. */
-
 
 const mediaQuery = window.matchMedia('(min-width:1200px)')
 
@@ -173,6 +171,5 @@ function switchHamb() {
 }
 
 mediaQuery.addEventListener("change", switchHamb);
-
 
 const hamburgerMenu = document.querySelector(".hamburger__menu");
