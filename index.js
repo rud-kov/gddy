@@ -76,16 +76,6 @@ const controlButtonRight = document.querySelector(".review__control__button--rig
     sideScroller.scrollLeft += 200;
 });
 
-////  FAQ ARROWS... 
-
-const faqDetails = document.querySelectorAll(".faq__details");
-const faqArrows = document.querySelectorAll(".faq__summary__arrow");
-
-faqDetails.forEach((faqDetail, index) => {
-    faqDetail.addEventListener("click", (event) => {
-        faqArrows[index].classList.toggle("arrow--open");
-    });
-});
 
 /************** FOOTER CURRENCY & LANGUAGUE EXPANDMENUS  */
 
@@ -139,14 +129,27 @@ hamburgerSwitches.forEach((hamburgerSwitch) => {
     })
 });
 
-const insideHamSwitches = document.querySelectorAll(".hamburger__link--warrow");
+const insideHamSwitches = document.querySelectorAll(".hamburger__link__button--arrow");
 
 insideHamSwitches.forEach((insideHamSwitch) => {
     insideHamSwitch.addEventListener("click", function(event) {
-        //insideHamSwitch.querySelector(".hamburger__insidemenu").classList.toggle("hamburger__insidemenu--open")
-    document.querySelector(".hamburger__insidemenu").classList.toggle("hamburger__insidemenu--open")
+        insideHamSwitch.nextElementSibling.classList.add("hamburger__insidemenu--open");
     })
 });
+
+
+
+const secondLevelMenuSwitches = document.querySelectorAll(".insidemenu__chevron");
+
+secondLevelMenuSwitches.forEach((secondLevelMenuSwitch) => {
+    secondLevelMenuSwitch.addEventListener("click", function(event) {        
+        secondLevelMenuSwitch.closest(".hamburger__insidemenu").classList.remove("hamburger__insidemenu--open");
+    })
+});
+
+
+
+//const secondLevelMenu = document.querySelectorAll(".hamburger__insidemenu");
 
 
 // const mediaQuery = window.matchMedia("(min-width: 1200px)")

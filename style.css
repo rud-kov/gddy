@@ -21,7 +21,6 @@ a {
   vertical-align: baseline;
   background: transparent;
   text-decoration: none;
-  color: #767676;
 }
 
 a:hover,
@@ -31,8 +30,10 @@ button:hover {
 
 body {
   font-family: "Helvetica";
+  margin: 0 auto;
 }
 
+/**** GENERAL STYLING ****/
 /* HEADER */
 .header {
   background-color: #2B2B2B;
@@ -45,6 +46,7 @@ body {
 }
 
 .header__inner {
+  max-width: 2500px;
   padding: 0 3rem;
   margin: 0 auto;
   display: flex;
@@ -262,7 +264,7 @@ body {
 
 .hamburger__menu {
   display: none;
-  position: absolute;
+  position: fixed;
   flex-direction: row;
   left: 0;
   top: 0;
@@ -281,6 +283,8 @@ body {
   animation: slidein 400ms;
   flex: 3;
   min-width: 250px;
+  max-width: 450px;
+  position: relative;
 }
 
 @keyframes slidein {
@@ -300,7 +304,7 @@ body {
   flex-wrap: wrap;
   flex: 2;
   z-index: 10;
-  position: relative;
+  position: static;
 }
 
 .hamburger__logo__wrapper {
@@ -309,33 +313,38 @@ body {
 }
 
 .hamburger__links {
+  display: flex;
+  flex-direction: column;
   margin: 50px 0;
   flex: 2;
+  position: static;
 }
 
 .hamburger__link {
   padding: 24px 0 24px;
   font-size: 1.1rem;
-  position: relative;
-  z-index: 10;
-}
-
-.hamburger__link--warrow::after {
-  content: url("/arrow__right--black.svg");
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: static;
   display: flex;
-  height: 100%;
-  align-items: center;
 }
 
-.hamburger__link--warrow:hover {
-  cursor: pointer;
+.arrowlink__inside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25px;
+  flex-direction: row;
 }
-.hamburger__link--warrow:hover .hamburger__link--warrow::after {
-  position: relative;
-  right: 20px;
+
+.hamburger__link__button--arrow {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex: 2;
+  transition: translate 400ms;
+}
+
+.hamburger__link__button--arrow:hover img {
+  translate: 5px 0;
 }
 
 .header__logo__caption--mobile {
@@ -348,7 +357,7 @@ body {
   gap: 20px;
 }
 
-.hamburger__bottomlink {
+.hamburger__bottomlink a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -369,52 +378,64 @@ body {
 .hamburger__close__svg {
   height: 30px;
   width: 30px;
-  margin: 20px 0 0 20px;
+  margin: 16px 0 0 10px;
 }
 
 .hamburger__close__svg:hover {
   cursor: pointer;
 }
 
-.hamburger__link__button {
-  position: relative;
-}
-
 .hamburger__insidemenu {
   display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  min-width: 250px;
+  z-index: 600;
+  background-color: whitesmoke;
+  flex: 3;
+}
+
+.hamburger__insidemenu--webhosting {
+  overflow: scroll;
 }
 
 .hamburger__insidemenu--open {
   display: flex;
-  flex-direction: column;
-  position: fixed;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 600;
-  background-color: red;
-}
-
-.testmenu {
-  position: relative;
-  padding: 16px;
-  top: 0;
-  right: 0;
-  width: 100%;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  flex: 3;
-  background-color: red;
 }
 
 .insidemenu__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 3;
   padding: 16px;
-  background-color: red;
+  opacity: 1;
+  animation: opacitySlide 800ms;
 }
 
+@keyframes opacitySlide {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 .insidemenu__chevron {
   width: 35px;
+}
+
+.insidemenu__chevron:hover {
+  cursor: pointer;
 }
 
 .insidemenu__headline {
@@ -426,9 +447,17 @@ body {
 
 .insidemenu__row {
   display: flex;
+  white-space: wrap;
   gap: 10px;
   align-items: center;
   padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.insidemenu__row:hover {
+  background-color: #FFF;
+  cursor: pointer;
+  color: #1A76D0;
 }
 
 .insidemenu__row__svg {
@@ -443,12 +472,14 @@ body {
 }
 
 .insidemenu__content__chapter--banner {
+  margin: 15px 0 0 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  margin: 0 12px;
 }
 
 .insidemenu__banner {
-  min-width: 300px;
   width: 100%;
   min-height: 200px;
   height: 100%;
@@ -456,15 +487,30 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 535px 440px;
+  transition: background-size 400ms ease-in-out;
+}
+
+.insidemenu__banner--webhosting {
+  background-image: url("/img-meganav-ecommerce-hosting.webp");
+}
+
+.insidemenu__banner--marketing {
+  background-image: url("/Image-Grow-Desktop.webp");
+  background-size: 400px 340px;
 }
 
 .insidemenu__banner__link {
   color: #000;
   font-size: 18px;
+  margin: 10px 0 0 0;
 }
 
-.insidemenu__banner__link:hover {
+.insidemenu__content__chapter--banner:hover .insidemenu__banner__link {
   text-decoration: underline;
+}
+
+.insidemenu__content__chapter--banner:hover .insidemenu__banner {
+  background-size: 635px 540px;
 }
 
 /* BODYYY ****************/
@@ -473,7 +519,9 @@ body {
 }
 
 .hero__wrapper {
+  max-width: 2500px;
   padding: 0 3rem;
+  margin: 0 auto;
 }
 
 .searchbar {
@@ -756,8 +804,10 @@ body {
 
 /* REVIEWS PART */
 .reviews__wrapper {
+  max-width: 2500px;
   padding: 5dvh 3rem;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 
 .reviews__inner__wrapper {
@@ -907,6 +957,8 @@ body {
 
 /* RTB BLOCK */
 .rtb {
+  margin: 0 auto;
+  max-width: 2500px;
   padding: 60px 3rem;
 }
 
@@ -1007,6 +1059,8 @@ body {
   display: flex;
   align-content: center;
   min-height: 35dvh;
+  margin: 0 auto;
+  max-width: 2500px;
 }
 
 .domain__content {
@@ -1059,6 +1113,8 @@ body {
   align-items: center;
   background-clip: padding-box;
   position: relative;
+  margin: 0 auto;
+  max-width: 2500px;
 }
 
 .guide__figcaption {
@@ -1121,10 +1177,12 @@ body {
 /******** FAQ ***********/
 .faq {
   margin: 200px 0 0 0;
+  margin: 0 auto;
+  max-width: 2500px;
 }
 
 .faq__wrapper {
-  margin: 0 auto;
+  margin: 50px auto;
   text-align: left;
   max-width: 800px;
 }
@@ -1167,14 +1225,26 @@ body {
 .faq__wrapper summary {
   font-size: 1.5rem;
   font-weight: bolder;
-  display: flex;
-  justify-content: space-between;
+  list-style: none;
+  margin: 0 25px 0 0;
 }
 
-.faq__summary__arrow {
+.faq__details {
+  position: relative;
+}
+
+.faq__details::after {
+  content: url("arrow__down--black.svg");
   height: 25px;
   width: 25px;
+  position: absolute;
+  right: 0;
+  top: 0;
   transition: transform 200ms;
+}
+
+.faq__details[open]::after {
+  transform: rotate(180deg);
 }
 
 .faq__details__li {
@@ -1225,7 +1295,8 @@ body {
   align-items: center;
   height: 60px;
   flex-direction: column;
-  box-shadow: 0 0 0 0.5px whitesmoke;
+  box-shadow: 0 0.5px 0 0 whitesmoke;
+  max-width: 2500px;
 }
 
 .footer__header__text {
@@ -1238,6 +1309,8 @@ body {
   flex-direction: row;
   justify-content: space-between;
   gap: 50px;
+  margin: 0 auto;
+  max-width: 2500px;
 }
 
 .footer__column__wrapper--mobile {
@@ -1267,6 +1340,8 @@ body {
   gap: 20px;
   padding-bottom: 50px;
   border-bottom: 1px solid whitesmoke;
+  max-width: 2500px;
+  margin: 0 auto;
 }
 
 .footer__bottombar__left {
@@ -1404,6 +1479,8 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
+  margin: 0 auto;
+  max-width: 2500px;
 }
 
 .footer__notes__wrapper {
@@ -1638,7 +1715,7 @@ body {
   .faq__questions {
     max-width: 450px;
   }
-  .faq__details summary p {
+  .faq__details summary {
     font-size: 1.1rem;
   }
   .faq__note {
