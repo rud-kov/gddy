@@ -132,6 +132,8 @@ expandMenuSwitch(languageButtons, languageControl);
 
 /***** HAMBURGER MENU */
 
+const body = document.querySelector(".body");
+
 const hamburgerSwitches = document.querySelectorAll(".ham__switch");
 
 hamburgerSwitches.forEach((hamburgerSwitch) => {
@@ -159,16 +161,18 @@ secondLevelMenuSwitches.forEach((secondLevelMenuSwitch) => {
 });
 
 
+/***** QUERRIES FOR SWITCHING OF HAMB. ETC. */
 
-//const secondLevelMenu = document.querySelectorAll(".hamburger__insidemenu");
 
+const mediaQuery = window.matchMedia('(min-width:1200px)')
 
-// const mediaQuery = window.matchMedia("(min-width: 1200px)")
-// 
-// if (mediaQuery.matches) {
-//     body.classList.remove("body__hamburger__on")
-// }
+function switchHamb() {
+    if (mediaQuery.matches) {
+        body.classList.remove("body__hamburger__on");
+    }
+}
 
-const body = document.querySelector(".body");
+mediaQuery.addEventListener("change", switchHamb);
+
 
 const hamburgerMenu = document.querySelector(".hamburger__menu");
