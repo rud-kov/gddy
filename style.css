@@ -1725,6 +1725,7 @@ body {
   }
   .faq__support {
     margin: 20px 0 0;
+    letter-spacing: initial;
   }
   .faq__support p {
     padding: 0 16px;

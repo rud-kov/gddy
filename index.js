@@ -139,7 +139,10 @@ const hamburgerSwitches = document.querySelectorAll(".ham__switch");
 hamburgerSwitches.forEach((hamburgerSwitch) => {
     hamburgerSwitch.addEventListener("click", function(event) {
         hamburgerMenu.classList.toggle("hamburger__menu--opened");
-        body.classList.toggle("body__hamburger__on")
+        body.classList.toggle("body__hamburger__on");
+        document.querySelectorAll(".hamburger__insidemenu").forEach((insidemenu) => {
+            insidemenu.classList.remove("hamburger__insidemenu--open");
+        })
     })
 });
 
