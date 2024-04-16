@@ -416,6 +416,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 15px;
   flex: 3;
   padding: 16px;
   opacity: 1;
@@ -474,6 +475,12 @@ body {
   font-size: .85rem;
 }
 
+.insidemenu__content__chapter--marketing {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .insidemenu__content__chapter--banner {
   margin: 15px 0 0 0;
   display: flex;
@@ -515,7 +522,6 @@ body {
 .insidemenu__content__chapter--banner:hover .insidemenu__banner {
   background-size: 635px 540px;
 }
-
 
 /* BODYYY ****************/
 
@@ -797,7 +803,7 @@ body {
   color: #FFF;
   border-left: 0.5px solid #111;
   border-right: 0.5px solid #111;
-  border-bottom: 0.5px solid;
+  border-bottom: 0.5px solid #111;
 
   .service__content--arrow {
     position: relative;
@@ -955,7 +961,6 @@ body {
   height: 30px;
 }
 
-
 /* RTB BLOCK */
 
 .rtb {
@@ -1059,9 +1064,10 @@ body {
   text-align: center;
   display: flex;
   align-content: center;
-  min-height: 35dvh;
+  min-height: 350px;
   margin: 0 auto;
   max-width: 2500px;
+  max-height: 500px;
 }
 
 .domain__content {
@@ -1072,7 +1078,6 @@ body {
   justify-content: center;
   flex-direction: column;
   max-width: 40dvw;
-  padding: 8dvh;
 }
 
 .searchbar--secondary {
@@ -1236,7 +1241,6 @@ body {
   position: relative;
 }
 
-
 .faq__details::after {
   content: url('arrow__down--black.svg');
   height: 25px;
@@ -1253,7 +1257,7 @@ body {
 
 .faq__details__li {
   list-style: disc;
-  margin: 10px 0px 0 20px;
+  margin: 10px 0 0 20px;
   font-size: 0.9rem;
 }
 
@@ -1525,7 +1529,6 @@ body {
   color: #FFF;
 }
 
-
 /*********** SWITCHING DISPLAYS AND ROTATING ARROWS ********/
 
 .arrow--open {
@@ -1607,7 +1610,7 @@ body {
 
   .hero__offer--left {
     min-height: 559px;    
-    background-image: url("/mobile__hp-portrait.webp");
+    background-image: url("./mobile__hp-portrait.webp");
     background-size: cover;
     background-position: center 80%;
   }
@@ -1657,7 +1660,7 @@ body {
 
   .hero__content--right > div {
     text-align: left;
-    margin: 0 0px 16px;
+    margin: 0 0 16px;
   }
 
   .hero__content--right > div {
@@ -1833,7 +1836,7 @@ body {
   }
 
   .footer__bodycopy:hover {
-   text-decoration: underline;
+    text-decoration: underline;
   }
 
   .footer__bottombar {
