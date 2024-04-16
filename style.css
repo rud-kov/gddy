@@ -552,10 +552,6 @@ body {
   padding: 0 16px;
 }
 
-.input--third[type=text]:focus {
-  outline: none;
-}
-
 .input__button {
   height: 60px;
   background-color: #00838C;
@@ -767,7 +763,7 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  transition: opacity 100ms;
+  transition: opacity 50ms;
 }
 
 .service__headline,
@@ -837,15 +833,6 @@ body {
 
 .reviews__box__wrapper::-webkit-scrollbar {
   display: none;
-}
-
-.reviews__box__wrapper-snap {
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 1rem;
-}
-
-.reviews__box__wrapper--snap > * {
-  scroll-snap-align: start;
 }
 
 .reviews__box {
@@ -1525,7 +1512,8 @@ body {
 /*************** MOBILE QUERRIES *********/
 @media only screen and (max-width: 1200px) {
   .header,
-  .input__button--domains {
+  .input__button--domains,
+  .hero__price {
     display: none;
   }
   .header--mobile {
@@ -1550,9 +1538,6 @@ body {
   .input__button--mobile {
     display: flex;
     flex-basis: 52px;
-  }
-  .hero__price {
-    display: none;
   }
   .input__button__search {
     height: 40px;

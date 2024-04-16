@@ -99,7 +99,7 @@ const expandableLinks = document.querySelectorAll(".footer__bottombar__link");
 
 document.addEventListener("click", expandableMenuSwitch);
 
-/******* CHANGING CURRENCY AND LANGUAGUE LINKS */
+/******* CHANGING FOOTER CURRENCY AND LANGUAGUE LINKS */
 
 function expandMenuSwitch(buttons, control) {
     buttons.forEach((button) => {
@@ -153,7 +153,6 @@ insideHamSwitches.forEach((insideHamSwitch) => {
         insideHamSwitch.nextElementSibling.classList.add("hamburger__insidemenu--open");
     })
 });
-
 
 const secondLevelMenuSwitches = document.querySelectorAll(".insidemenu__chevron");
 
