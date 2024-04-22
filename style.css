@@ -494,11 +494,11 @@ body {
 }
 
 .insidemenu__banner--webhosting {
-  background-image: url("/img-meganav-ecommerce-hosting.webp");
+  background-image: url(".img/img-meganav-ecommerce-hosting.webp");
 }
 
 .insidemenu__banner--marketing {
-  background-image: url("/Image-Grow-Desktop.webp");
+  background-image: url(".img/Image-Grow-Desktop.webp");
   background-size: 400px 340px;
 }
 
@@ -613,7 +613,7 @@ body {
 }
 
 .hero__offer--left {
-  background-image: url("./row-mrq-hp-landscape (2).jpg");
+  background-image: url("./img/row-mrq-hp-landscape (2).jpg");
   display: flex;
   padding: 2dvw;
   background-size: cover;
@@ -762,7 +762,7 @@ body {
 }
 
 .hero__service--arrow::after {
-  content: url("/arrow__right.svg");
+  content: url("./img/arrow__right.svg");
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1094,7 +1094,7 @@ body {
 
 /************ GUIDE *********/
 .guide {
-  background-image: url("/mrq-Guide-EMEA-Jamila-desktop.webp");
+  background-image: url("./img/mrq-Guide-EMEA-Jamila-desktop.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1224,7 +1224,7 @@ body {
 }
 
 .faq__details::after {
-  content: url("arrow__down--black.svg");
+  content: url("./img/arrow__down--black.svg");
   height: 25px;
   width: 25px;
   position: absolute;
@@ -1572,7 +1572,7 @@ body {
   }
   .hero__offer--left {
     min-height: 559px;
-    background-image: url("./mobile__hp-portrait.webp");
+    background-image: url("./img/mobile__hp-portrait.webp");
     background-size: cover;
     background-position: center 80%;
   }
@@ -1600,7 +1600,7 @@ body {
     max-width: 50%;
   }
   .hero__offer--right::after {
-    content: url("/arrow__right--black--big.svg");
+    content: url("./img/arrow__right--black--big.svg");
     position: absolute;
     right: 30px;
     padding: 20px;
